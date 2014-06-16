@@ -68,11 +68,16 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\Schedule\SchedulerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Application\" />
-    <Folder Include="Domain\" />
+    <Folder Include="Domain\Credentials\" />
+    <Folder Include="Domain\DataIntegrity\" />
+    <Folder Include="Domain\ErrorHandling\" />
+    <Folder Include="Domain\LoadManagement\" />
+    <Folder Include="Domain\ScraperDataHandling\" />
     <Folder Include="Infrastructure\" />
     <Folder Include="Interface\" />
     <Folder Include="Presentation\" />

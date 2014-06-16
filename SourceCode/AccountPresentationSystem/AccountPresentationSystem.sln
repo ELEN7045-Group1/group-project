@@ -1,21 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountPresentationSystem", "AccountPresentationSystem\AccountPresentationSystem.csproj", "{0CB9DD12-357B-4CE2-B060-240D77DDDD98}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountPresentationSystem", "AccountPresentationSystem\AccountPresentationSystem.csproj", "{AFFED10C-AE82-470E-ADA3-A91BB3D391DC}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{9395A2DA-B83E-46C6-A4A6-5E4047FB5B2A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountPresentationSystem.Tests", "AccountPresentationSystem.Tests\AccountPresentationSystem.Tests.csproj", "{1FA21D69-E96A-495C-9D0D-3A7508CBB451}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{23A8D251-F8CC-48E9-A327-43AC28CD57BC}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infastructure", "Infastructure", "{7CD7915B-7E16-4D82-86A7-D5E0E2DDD3FC}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interface", "Interface", "{BBEF9F7B-066A-4EC9-A2D5-83CBA97D080D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{E24CDFE7-EAF3-4552-B930-56D2A0A55F01}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0E6FA099-54ED-4BA8-9398-24AC6725D0C4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{20CAEB48-4AE1-44CE-98C9-79EC9FD1509E}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +18,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0CB9DD12-357B-4CE2-B060-240D77DDDD98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0CB9DD12-357B-4CE2-B060-240D77DDDD98}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0CB9DD12-357B-4CE2-B060-240D77DDDD98}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0CB9DD12-357B-4CE2-B060-240D77DDDD98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFFED10C-AE82-470E-ADA3-A91BB3D391DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFFED10C-AE82-470E-ADA3-A91BB3D391DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFFED10C-AE82-470E-ADA3-A91BB3D391DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFFED10C-AE82-470E-ADA3-A91BB3D391DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FA21D69-E96A-495C-9D0D-3A7508CBB451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FA21D69-E96A-495C-9D0D-3A7508CBB451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FA21D69-E96A-495C-9D0D-3A7508CBB451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FA21D69-E96A-495C-9D0D-3A7508CBB451}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

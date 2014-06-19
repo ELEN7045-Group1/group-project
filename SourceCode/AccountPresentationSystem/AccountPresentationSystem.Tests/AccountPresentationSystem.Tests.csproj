@@ -67,6 +67,8 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\Credentials\APSUserIdTest.cs" />
+    <Compile Include="Domain\Credentials\APSUserTest.cs" />
     <Compile Include="Domain\Schedule\SchedulerServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -80,7 +82,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Domain\Credentials\" />
+    <Folder Include="Domain\Billing\" />
     <Folder Include="Domain\DataIntegrity\" />
     <Folder Include="Domain\ErrorHandling\" />
     <Folder Include="Domain\LoadManagement\" />

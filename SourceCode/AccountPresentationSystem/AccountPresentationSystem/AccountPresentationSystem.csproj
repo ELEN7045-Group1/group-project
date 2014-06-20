@@ -68,6 +68,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\Billing\BillingAccountId.cs" />
+    <Compile Include="Domain\Billing\BillingCompanyId.cs" />
     <Compile Include="Domain\Credentials\APSUser.cs" />
     <Compile Include="Domain\Credentials\APSUserId.cs" />
     <Compile Include="Domain\Schedule\SchedulerService.cs" />
@@ -85,7 +87,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Application\" />
-    <Folder Include="Domain\Billing\" />
     <Folder Include="Domain\DataIntegrity\" />
     <Folder Include="Domain\ErrorHandling\" />
     <Folder Include="Domain\LoadManagement\" />

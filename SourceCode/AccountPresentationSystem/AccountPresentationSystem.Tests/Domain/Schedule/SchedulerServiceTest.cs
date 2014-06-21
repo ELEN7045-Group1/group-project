@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using AccountPresentationSystem.Domain.Schedule;
+using AccountPresentationSystem.Domain.Scheduling;
 
 namespace AccountPresentationSystem.Domain.Schedule
 {

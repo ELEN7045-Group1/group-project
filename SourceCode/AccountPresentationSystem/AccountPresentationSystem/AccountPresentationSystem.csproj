@@ -79,39 +79,40 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\Billing\BillingAccountId.cs" />
-    <Compile Include="Domain\Billing\BillingCompany.cs" />
-    <Compile Include="Domain\Billing\BillingCompanyId.cs" />
-    <Compile Include="Domain\Credentials\APSUser.cs" />
-    <Compile Include="Domain\Credentials\APSUserId.cs" />
-    <Compile Include="Domain\Scheduling\IScheduleRepository.cs" />
-    <Compile Include="Domain\Scheduling\Schedule.cs" />
-    <Compile Include="Domain\Scheduling\ScheduleRepository.cs" />
-    <Compile Include="Domain\Scheduling\SchedulerService.cs" />
-    <Compile Include="Domain\StatementHandler\Statement.cs" />
-    <Compile Include="Domain\StatementHandler\StatementNumberFomatter.cs" />
+    <Compile Include="Domain\Model\Billing\BillingAccountId.cs" />
+    <Compile Include="Domain\Model\Billing\BillingCompany.cs" />
+    <Compile Include="Domain\Model\Billing\BillingCompanyId.cs" />
+    <Compile Include="Domain\Model\Credentials\APSUser.cs" />
+    <Compile Include="Domain\Model\Credentials\APSUserId.cs" />
+    <Compile Include="Domain\Model\Scheduling\IScheduleRepository.cs" />
+    <Compile Include="Domain\Model\Scheduling\Schedule.cs" />
+    <Compile Include="Domain\Model\Scheduling\ScheduleRepository.cs" />
+    <Compile Include="Domain\Model\Scheduling\SchedulerService.cs" />
+    <Compile Include="Domain\Model\StatementHandler\Statement.cs" />
+    <Compile Include="Domain\Model\StatementHandler\StatementNumberFomatter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\DBConnection.cs" />
     <Compile Include="Infrastructure\IDBConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Shared\AbstractSpecification.cs" />
-    <Compile Include="Shared\AndSpecification.cs" />
-    <Compile Include="Shared\DomainObjectUtils.cs" />
-    <Compile Include="Shared\Enumeration.cs" />
-    <Compile Include="Shared\IDomainEvent.cs" />
-    <Compile Include="Shared\IEntity.cs" />
-    <Compile Include="Shared\ISpecification.cs" />
-    <Compile Include="Shared\IValueObject.cs" />
-    <Compile Include="Shared\NotSpecification.cs" />
-    <Compile Include="Shared\OrSpecification.cs" />
+    <Compile Include="Domain\Shared\AbstractSpecification.cs" />
+    <Compile Include="Domain\Shared\AndSpecification.cs" />
+    <Compile Include="Domain\Shared\DomainObjectUtils.cs" />
+    <Compile Include="Domain\Shared\Enumeration.cs" />
+    <Compile Include="Domain\Shared\IDomainEvent.cs" />
+    <Compile Include="Domain\Shared\IEntity.cs" />
+    <Compile Include="Domain\Shared\ISpecification.cs" />
+    <Compile Include="Domain\Shared\IValueObject.cs" />
+    <Compile Include="Domain\Shared\NotSpecification.cs" />
+    <Compile Include="Domain\Shared\OrSpecification.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Application\" />
-    <Folder Include="Domain\DataIntegrity\" />
-    <Folder Include="Domain\ErrorHandling\" />
-    <Folder Include="Domain\LoadManagement\" />
+    <Folder Include="Domain\Model\DataIntegrity\" />
+    <Folder Include="Domain\Model\ErrorHandling\" />
+    <Folder Include="Domain\Model\LoadManagement\" />
+    <Folder Include="Domain\Service\" />
     <Folder Include="Interface\" />
     <Folder Include="Presentation\" />
   </ItemGroup>

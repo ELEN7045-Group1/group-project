@@ -87,6 +87,8 @@
     <Compile Include="Domain\Scheduling\Schedule.cs" />
     <Compile Include="Domain\Scheduling\ScheduleRepository.cs" />
     <Compile Include="Domain\Scheduling\SchedulerService.cs" />
+    <Compile Include="Domain\StatementHandler\Statement.cs" />
+    <Compile Include="Domain\StatementHandler\StatementNumberFomatter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -109,7 +111,6 @@
     <Folder Include="Domain\DataIntegrity\" />
     <Folder Include="Domain\ErrorHandling\" />
     <Folder Include="Domain\LoadManagement\" />
-    <Folder Include="Domain\ScraperDataHandling\" />
     <Folder Include="Interface\" />
     <Folder Include="Presentation\" />
   </ItemGroup>

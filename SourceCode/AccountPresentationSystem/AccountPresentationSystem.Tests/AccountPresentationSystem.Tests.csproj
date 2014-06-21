@@ -81,6 +81,9 @@
     <Compile Include="Domain\Credentials\APSUserIdTest.cs" />
     <Compile Include="Domain\Credentials\APSUserTest.cs" />
     <Compile Include="Domain\Schedule\SchedulerServiceTest.cs" />
+    <Compile Include="Domain\StatementHandler\StatementDataIntegrityTest.cs" />
+    <Compile Include="Domain\StatementHandler\StatementNumberFormatterTest.cs" />
+    <Compile Include="Domain\StatementHandler\StatementTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -96,7 +99,6 @@
     <Folder Include="Domain\DataIntegrity\" />
     <Folder Include="Domain\ErrorHandling\" />
     <Folder Include="Domain\LoadManagement\" />
-    <Folder Include="Domain\ScraperDataHandling\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

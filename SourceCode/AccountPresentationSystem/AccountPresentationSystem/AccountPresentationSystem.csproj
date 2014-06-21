@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Domain\Billing\BillingAccountId.cs" />
+    <Compile Include="Domain\Billing\BillingCompany.cs" />
     <Compile Include="Domain\Billing\BillingCompanyId.cs" />
     <Compile Include="Domain\Credentials\APSUser.cs" />
     <Compile Include="Domain\Credentials\APSUserId.cs" />

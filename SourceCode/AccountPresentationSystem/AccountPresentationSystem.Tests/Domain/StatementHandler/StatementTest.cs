@@ -16,6 +16,5 @@ namespace AccountPresentationSystem.Tests.Domain.StatementHandler
             //Arrange -> Act -> Assert
            Assert.Throws(typeof(ArgumentNullException), ()=> new Statement(null));
         }
-        }
     }
 }

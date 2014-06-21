@@ -78,6 +78,7 @@
   <ItemGroup>
     <Compile Include="Domain\Billing\BillingAccountIdTest.cs" />
     <Compile Include="Domain\Billing\BillingCompanyIdTest.cs" />
+    <Compile Include="Domain\Billing\BillingCompanyTest.cs" />
     <Compile Include="Domain\Credentials\APSUserIdTest.cs" />
     <Compile Include="Domain\Credentials\APSUserTest.cs" />
     <Compile Include="Domain\Schedule\SchedulerServiceTest.cs" />

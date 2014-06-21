@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace AccountPresentationSystem.Domain.Scheduling
+namespace AccountPresentationSystem.Domain.Service
 {
     public class SchedulerService
     {

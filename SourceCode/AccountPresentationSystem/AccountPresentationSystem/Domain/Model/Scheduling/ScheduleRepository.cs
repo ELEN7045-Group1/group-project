@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Web;
 
-namespace AccountPresentationSystem.Domain.Scheduling
+namespace AccountPresentationSystem.Domain.Model.Scheduling
 {
     public class ScheduleRepository : IScheduleRepository
     {

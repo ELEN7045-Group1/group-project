@@ -1,4 +1,4 @@
-﻿using AccountPresentationSystem.Domain.Scheduling;
+﻿using AccountPresentationSystem.Domain.Model.Scheduling;
 using AccountPresentationSystem.Infrastructure;
 using Microsoft.Practices.Unity;
 using System;

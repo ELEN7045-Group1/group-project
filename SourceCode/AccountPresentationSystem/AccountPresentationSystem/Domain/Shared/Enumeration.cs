@@ -36,6 +36,13 @@
             get { return displayName; }
         }
 
+        public enum LoggingPriority : int
+        {
+            Low = 1,
+            Medium = 2,
+            High = 3,
+        }
+
         #region IComparable Members
 
         public int CompareTo(object other)

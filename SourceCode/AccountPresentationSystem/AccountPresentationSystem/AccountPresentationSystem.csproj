@@ -87,7 +87,7 @@
     <Compile Include="Domain\Model\Scheduling\IScheduleRepository.cs" />
     <Compile Include="Domain\Model\Scheduling\Schedule.cs" />
     <Compile Include="Domain\Model\Scheduling\ScheduleRepository.cs" />
-    <Compile Include="Domain\Model\Scheduling\SchedulerService.cs" />
+    <Compile Include="Domain\Service\SchedulerService.cs" />
     <Compile Include="Domain\Model\StatementHandler\Statement.cs" />
     <Compile Include="Domain\Model\StatementHandler\StatementNumberFomatter.cs" />
     <Compile Include="Global.asax.cs">
@@ -112,7 +112,6 @@
     <Folder Include="Domain\Model\DataIntegrity\" />
     <Folder Include="Domain\Model\ErrorHandling\" />
     <Folder Include="Domain\Model\LoadManagement\" />
-    <Folder Include="Domain\Service\" />
     <Folder Include="Interface\" />
     <Folder Include="Presentation\" />
   </ItemGroup>

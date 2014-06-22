@@ -86,6 +86,8 @@
     <Compile Include="Domain\Model\Billing\BillingCompanyId.cs" />
     <Compile Include="Domain\Model\APSUser\APSUser.cs" />
     <Compile Include="Domain\Model\APSUser\APSUserId.cs" />
+    <Compile Include="Domain\Model\Billing\BillingCompanyRepository.cs" />
+    <Compile Include="Domain\Model\Billing\IBillingCompanyRepository.cs" />
     <Compile Include="Domain\Model\Scheduling\IScheduleRepository.cs" />
     <Compile Include="Domain\Model\Scheduling\IScheduleRule.cs" />
     <Compile Include="Domain\Model\Scheduling\RetryAfterUnsuccessfullScrapeRule.cs" />

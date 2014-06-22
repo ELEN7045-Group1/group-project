@@ -20,7 +20,12 @@ namespace AccountPresentationSystem.Domain.Model.Scheduling
         public bool RuleIsSatisfiedBy(Schedule schedule)
         {
             // This function will assess whether or not the schedule passed in passes it's rules
-            throw new NotImplementedException();
+            
+            TimeOfDay ScheduleTime = new TimeOfDay(schedule.StartTime.Hour, schedule.StartTime.Minute, schedule.StartTime.Second);
+            if ((ScheduleTime > openPeriod) && (ScheduleTime < closePeriod))
+                return true;
+            else
+                return false;
         }
 
         public bool SameValueAs(WindowPeriodRule other)

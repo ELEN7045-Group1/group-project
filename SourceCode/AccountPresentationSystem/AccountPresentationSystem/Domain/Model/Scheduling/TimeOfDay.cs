@@ -44,11 +44,26 @@ namespace AccountPresentationSystem.Domain.Model.Scheduling
             return new TimeOfDay(t1Seconds + t2Seconds);
         }
 
+        public static bool operator >(TimeOfDay t1, TimeOfDay t2)
+        {
+            int t1Seconds = t1.ToSeconds();
+            int t2Seconds = t2.ToSeconds();
+
+            return (t1Seconds > t2Seconds);
+        }
+
+        public static bool operator <(TimeOfDay t1, TimeOfDay t2)
+        {
+            int t1Seconds = t1.ToSeconds();
+            int t2Seconds = t2.ToSeconds();
+
+            return (t1Seconds < t2Seconds);
+        }
+
         public override string ToString()
         {
             DateTimeFormatInfo TimeFormat = new DateTimeFormatInfo();
             return string.Format("{0:00}:{1:00}:{2:00}", this.Hour, this.Minute, this.Second);
-            //return string.Concat(string.Format("{0,2}", this.Hour), TimeFormat.TimeSeparator, string.Format("{0,2}", this.Minute), TimeFormat.TimeSeparator, string.Format("{0,2}", this.Second));
         }
 
         public int ToSeconds()

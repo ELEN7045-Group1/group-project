@@ -42,5 +42,33 @@ namespace AccountPresentationSystem.Tests.Domain.Model.Schedule
             Assert.AreEqual(NewTime.Minute, 11);
             Assert.AreEqual(NewTime.Second, 10);
         }
+
+        [Test]
+        public void TimeOfDayGreaterThan()
+        {
+            //Arange
+            TimeOfDay Time1 = new TimeOfDay(4, 55, 30);
+            TimeOfDay Time2 = new TimeOfDay(4, 46, 40);
+
+            //Act
+            bool IsGreater = Time1 > Time2;
+
+            //Assert
+            Assert.IsTrue(IsGreater);
+        }
+
+        [Test]
+        public void TimeOfDayLessThan()
+        {
+            //Arange
+            TimeOfDay Time1 = new TimeOfDay(4, 35, 30);
+            TimeOfDay Time2 = new TimeOfDay(4, 46, 40);
+
+            //Act
+            bool IsGreater = Time1 < Time2;
+
+            //Assert
+            Assert.IsTrue(IsGreater);
+        }
     }
 }

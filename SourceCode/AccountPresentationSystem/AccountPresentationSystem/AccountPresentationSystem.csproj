@@ -97,6 +97,7 @@
     <Compile Include="Domain\Model\Scheduling\Schedule.cs" />
     <Compile Include="Domain\Model\Scheduling\ScheduleRepository.cs" />
     <Compile Include="Domain\Model\Scheduling\StatementLifeCycleRule.cs" />
+    <Compile Include="Domain\Model\Scheduling\TimeOfDay.cs" />
     <Compile Include="Domain\Model\Scheduling\WindowPeriodRule.cs" />
     <Compile Include="Domain\Model\StatementHandler\StatementCommonFields.cs" />
     <Compile Include="Domain\Model\StatementHandler\StatementSpecificFields.cs" />

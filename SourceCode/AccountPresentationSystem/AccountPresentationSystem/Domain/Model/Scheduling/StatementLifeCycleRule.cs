@@ -6,7 +6,7 @@ using System.Web;
 
 namespace AccountPresentationSystem.Domain.Model.Scheduling
 {
-    public class StatementLifeCycleRule : IScheduleRule, IValueObject<StatementLifeCycleRule>
+    public class StatementLifeCycleRule : IValueObject<StatementLifeCycleRule>
     {
         public int numOfDaysPerBillingCycle;
         public int leadTimeInterval;

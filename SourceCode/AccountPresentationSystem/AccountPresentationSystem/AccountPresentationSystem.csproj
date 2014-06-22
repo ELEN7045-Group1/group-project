@@ -96,13 +96,14 @@
     <Compile Include="Domain\Model\Billing\BillingCompanyRepository.cs" />
     <Compile Include="Domain\Model\Billing\IBillingCompanyRepository.cs" />
     <Compile Include="Domain\Model\Scheduling\IScheduleRepository.cs" />
-    <Compile Include="Domain\Model\Scheduling\IScheduleRule.cs" />
-    <Compile Include="Domain\Model\Scheduling\RetryAfterUnsuccessfullScrapeRule.cs" />
+    <Compile Include="Domain\Model\Scheduling\RetryAfterUnsuccessfulScrapeRule.cs" />
     <Compile Include="Domain\Model\Scheduling\Schedule.cs" />
     <Compile Include="Domain\Model\Scheduling\ScheduleRepository.cs" />
     <Compile Include="Domain\Model\Scheduling\StatementLifeCycleRule.cs" />
+    <Compile Include="Domain\Model\Scheduling\RetryAfterUnsuccessfulScrapeRuleRepository.cs" />
     <Compile Include="Domain\Model\Scheduling\TimeOfDay.cs" />
     <Compile Include="Domain\Model\Scheduling\WindowPeriodRule.cs" />
+    <Compile Include="Domain\Model\Scheduling\WindowPeriodRuleRepository.cs" />
     <Compile Include="Domain\Model\StatementHandler\StatementCommonFields.cs" />
     <Compile Include="Domain\Model\StatementHandler\StatementSpecificFields.cs" />
     <Compile Include="Domain\Service\LoadManagerService.cs" />
@@ -113,6 +114,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\DBConnection.cs" />
+    <Compile Include="Infrastructure\Enums.cs" />
     <Compile Include="Infrastructure\IDBConnection.cs" />
     <Compile Include="Infrastructure\Logging.cs" />
     <Compile Include="Infrastructure\MessageObjectWrapper.cs" />

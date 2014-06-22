@@ -9,29 +9,18 @@ namespace AccountPresentationSystem.Domain.Model.Scheduling
 {
     public class ScheduleRepository : IScheduleRepository
     {
-        IDBConnection dataConnection;
+        private readonly IDBConnection dataConnection;
 
         public ScheduleRepository(IDBConnection DBConnection)
         {
             this.dataConnection = DBConnection;
         }
 
-        public IList<Schedule> GetAllSchedules()
+        public List<Schedule> GetAllSchedules()
         {
-            IList<Schedule> ReturnList = new List<Schedule>();
+            // This retrieves all schedules via the DBConnetion
 
-            DataTable dt = dataConnection.SelectQuery("Select query to retrieve All Schedules");
-
-            foreach (DataRow dr in dt.Rows)
-            {
-                Schedule SchedItem = new Schedule() {
-                    StartTime = Convert.ToDateTime(dr["StartTime"]),
-                    ScrapeWindow = new TimeSpan(Convert.ToInt64(dr["TimeSpan"]))
-                };
-
-                ReturnList.Add(SchedItem);
-            }
-
+            List<Schedule> ReturnList = new List<Schedule>();
             return ReturnList;
         }
     }

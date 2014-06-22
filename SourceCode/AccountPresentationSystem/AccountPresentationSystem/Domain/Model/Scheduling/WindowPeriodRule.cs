@@ -6,7 +6,7 @@ using System.Web;
 
 namespace AccountPresentationSystem.Domain.Model.Scheduling
 {
-    public class WindowPeriodRule : IScheduleRule, IValueObject<WindowPeriodRule>
+    public class WindowPeriodRule : IValueObject<WindowPeriodRule>
     {
         private TimeOfDay openPeriod;
         private TimeOfDay closePeriod;

@@ -8,6 +8,6 @@ namespace AccountPresentationSystem.Domain.Model.Scheduling
 {
     public interface IScheduleRepository
     {
-        IList<Schedule> GetAllSchedules();
+        List<Schedule> GetAllSchedules();
     }
 }

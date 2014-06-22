@@ -84,16 +84,11 @@
     <Compile Include="Domain\Model\Billing\BillingAccountId.cs" />
     <Compile Include="Domain\Model\Billing\BillingCompany.cs" />
     <Compile Include="Domain\Model\Billing\BillingCompanyId.cs" />
-<<<<<<< HEAD
-    <Compile Include="Domain\Model\Credentials\APSUser.cs" />
-    <Compile Include="Domain\Model\Credentials\APSUserId.cs" />
     <Compile Include="Domain\Model\LoadManagement\IScrapeDataRepository.cs" />
     <Compile Include="Domain\Model\LoadManagement\ScrapeData.cs" />
     <Compile Include="Domain\Model\LoadManagement\ScrapeDataRepository.cs" />
-=======
     <Compile Include="Domain\Model\APSUser\APSUser.cs" />
     <Compile Include="Domain\Model\APSUser\APSUserId.cs" />
->>>>>>> 1456cd6f043b47a45244bb2d10a03f9b04445319
     <Compile Include="Domain\Model\Scheduling\IScheduleRepository.cs" />
     <Compile Include="Domain\Model\Scheduling\IScheduleRule.cs" />
     <Compile Include="Domain\Model\Scheduling\RetryAfterUnsuccessfullScrapeRule.cs" />

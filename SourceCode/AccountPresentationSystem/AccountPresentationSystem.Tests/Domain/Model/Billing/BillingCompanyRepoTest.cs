@@ -14,11 +14,13 @@
     class BillingCompanyRepoTest
     {
         [Test]
-        public void Get_BillingCompanies_ExpectListOfBillingCompanies()
+        public void Get_BillingCompanies_ExpectRepoMethodCalled()
         {
             var repository = MockRepository.GenerateMock<IBillingCompanyRepository>();
 
-            repository.(x => x.GetObjects(It.IsAny<string>()).Returns("whatever getobjects should be returned, maybe a mock object or string");
+            repository.Expect(r => r.GetAllBillingCompanies());
+
+            repository.GetAllBillingCompanies();
 
             repository.VerifyAllExpectations();
         }

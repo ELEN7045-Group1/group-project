@@ -14,13 +14,10 @@ namespace AccountPresentationSystem.Tests.Domain.Service
         [Test]
         public void CreateLoadManagerTest()
         {
-            // Arrange
             LoadManagerService MyService = new LoadManagerService();
 
-            // Act
             bool retVal = MyService.CreateLoadManager();
 
-            // Assert
             Assert.IsTrue(retVal);
         }
     }

@@ -15,13 +15,10 @@ namespace AccountPresentationSystem.Tests.Intrastructure
         [Test]
         public void CreateLoggingTest()
         {
-            // Arrange
             Logging MyService = new Logging();
 
-            // Act
             bool retVal = MyService.LogMessage(Enumeration.LoggingPriority.Medium, "123456", new Exception()); ;
 
-            // Assert
             Assert.IsTrue(retVal);
         }
     }

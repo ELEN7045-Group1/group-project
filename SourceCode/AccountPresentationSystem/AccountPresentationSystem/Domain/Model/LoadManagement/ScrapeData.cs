@@ -16,10 +16,10 @@ namespace AccountPresentationSystem.Domain.Model.LoadManagement
 
        // private IScheduleRepository scheduleRepository;
 
-        public ScrapeData(/*IScheduleRepository ScheduleRepo*/)
-        {
-           // scheduleRepository = ScheduleRepo;
+        //public ScrapeData(/*IScheduleRepository ScheduleRepo*/)
+        //{
+        //   // scheduleRepository = ScheduleRepo;
             
-        }
+        //}
     }
 }

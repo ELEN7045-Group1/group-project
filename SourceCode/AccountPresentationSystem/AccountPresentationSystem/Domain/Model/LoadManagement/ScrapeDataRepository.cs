@@ -8,16 +8,16 @@ using NDDDSample.Domain.Shared;
 
 namespace AccountPresentationSystem.Domain.Model.LoadManagement
 {
-    public class ScrapeDataRepository : AccountPresentationSystem.Domain.Model.LoadManagement.IScrapeDataRepository
+    public class ScrapeDataRepository : IScrapeDataRepository
     {
-         IDBConnection dataConnection;
+        IDBConnection dataConnection;
 
-         public ScrapeDataRepository(IDBConnection DBConnection)
+         public ScrapeDataRepository()
         {
-            this.dataConnection = DBConnection;
+            //this.dataConnection = DBConnection;
         }
 
-        public bool SaveScrapeData(IList<ScrapeData> scrapedData)
+        public bool SaveScrapeData(List<ScrapeData> scrapedData)
         {
             Logging log = new Logging();
             int rowsSavedCount = 0;

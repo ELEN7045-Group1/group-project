@@ -1,10 +1,13 @@
-﻿using AccountPresentationSystem.Domain.Model.Scheduling;
+﻿using AccountPresentationSystem.App_Start;
+using AccountPresentationSystem.Application;
+using AccountPresentationSystem.Domain.Model.Scheduling;
 using AccountPresentationSystem.Infrastructure;
 using Microsoft.Practices.Unity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Http;
 using System.Web.Security;
 using System.Web.SessionState;
 
@@ -16,11 +19,7 @@ namespace AccountPresentationSystem
         protected void Application_Start(object sender, EventArgs e)
         {
 
-            IDBConnection databaseConnection = new DBConnection();
-            UnityContainer container = new UnityContainer();
-
-            container.RegisterInstance<IDBConnection>(databaseConnection);
-            container.RegisterType<IScheduleRepository, ScheduleRepository>();
+            GlobalConfiguration.Configure(Bootstrapper.Setup);
         }
 
         protected void Session_Start(object sender, EventArgs e)

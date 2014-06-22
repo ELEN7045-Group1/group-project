@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
+using System.Web.Http;
+using System.Web.Http.Dependencies;
 
 namespace AccountPresentationSystem.Domain.Model.Scheduling
 {
@@ -19,7 +21,6 @@ namespace AccountPresentationSystem.Domain.Model.Scheduling
         public List<Schedule> GetAllSchedules()
         {
             // This retrieves all schedules via the DBConnetion
-
             List<Schedule> ReturnList = new List<Schedule>();
             return ReturnList;
         }

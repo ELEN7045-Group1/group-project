@@ -5,6 +5,8 @@ using System.Linq;
 using System.Web;
 using AccountPresentationSystem.Domain.Model.Scheduling;
 using AccountPresentationSystem.Domain.Service;
+using Rhino.Mocks;
+using AccountPresentationSystem.Infrastructure;
 
 namespace AccountPresentationSystem.Domain.Schedule
 {
@@ -15,7 +17,10 @@ namespace AccountPresentationSystem.Domain.Schedule
         public void CreateScheduleTest()
         {
             // Arrange
-            SchedulerService MyService = new SchedulerService();
+            var db = MockRepository.GenerateMock<IDBConnection>();
+            var SchedRepo = MockRepository.GenerateMock<ScheduleRepository>(db);
+
+            SchedulerCreatorService MyService = new SchedulerCreatorService(SchedRepo);
 
             // Act
             bool retVal = MyService.CreateSchedule();

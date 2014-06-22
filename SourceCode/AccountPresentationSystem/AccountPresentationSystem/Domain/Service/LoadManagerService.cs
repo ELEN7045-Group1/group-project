@@ -15,7 +15,7 @@ namespace AccountPresentationSystem.Domain.Service
         {
             ReferenceGenerator refNumber = new ReferenceGenerator();
             string refNum = refNumber.GenerateReference();
-            return false;
+            return true;
         }
     }
 }

@@ -5,7 +5,10 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Web;
-    
+
+    /// <summary>
+    /// Billing Company
+    /// </summary>
     public class BillingCompany : IEntity<BillingCompany>
     {
         private readonly BillingCompanyId _billingCompanyId;
@@ -53,10 +56,12 @@
         }
 
         /// <summary>
-        /// Value objects compare by the values of their attributes, they don't have an identity.
+        /// Entities compare by identity, not by attributes.
         /// </summary>
-        /// <param name="other">The other value object.</param>
-        /// <returns>true if the given value object's and this value object's attributes are the same.</returns>
+        /// <param name="other">The other entity.</param>
+        /// <returns>
+        /// true if the identities are the same, regardles of other attributes.
+        /// </returns>
         public virtual bool SameIdentityAs(BillingCompany other)
         {
             return billingCompanyId.SameValueAs(other.billingCompanyId);

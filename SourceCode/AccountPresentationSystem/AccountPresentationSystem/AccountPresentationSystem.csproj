@@ -88,10 +88,12 @@
     <Compile Include="Domain\Model\Scheduling\IScheduleRepository.cs" />
     <Compile Include="Domain\Model\Scheduling\Schedule.cs" />
     <Compile Include="Domain\Model\Scheduling\ScheduleRepository.cs" />
+    <Compile Include="Domain\Model\StatementHandler\StatementCommonFields.cs" />
+    <Compile Include="Domain\Model\StatementHandler\StatementSpecificFields.cs" />
     <Compile Include="Domain\Service\LoadManagerService.cs" />
     <Compile Include="Domain\Service\SchedulerService.cs" />
     <Compile Include="Domain\Model\StatementHandler\Statement.cs" />
-    <Compile Include="Domain\Model\StatementHandler\StatementNumberFomatter.cs" />
+    <Compile Include="Domain\Model\StatementHandler\StatementType.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

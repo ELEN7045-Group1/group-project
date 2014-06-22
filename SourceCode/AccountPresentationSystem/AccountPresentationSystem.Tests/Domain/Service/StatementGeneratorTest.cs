@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AccountPresentationSystem.Tests.Domain.StatementHandler
+namespace AccountPresentationSystem.Tests.Domain.Service
 {
-    class StatementDataIntegrityTest
+    class StatementGeneratorTest
     {
     }
 }

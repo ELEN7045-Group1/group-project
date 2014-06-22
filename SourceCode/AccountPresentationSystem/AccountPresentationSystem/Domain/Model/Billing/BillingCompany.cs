@@ -8,7 +8,7 @@
     
     public class BillingCompany : IEntity<BillingCompany>
     {
-        private readonly BillingCompanyId billingCompanyId;
+        private readonly BillingCompanyId _billingCompanyId;
         private readonly string companyName;
 
         /// <summary>
@@ -25,20 +25,32 @@
             }
             else
             {
-                this.billingCompanyId = billingCompanyId;
+                this._billingCompanyId = billingCompanyId;
                 this.companyName = companyName;
             }           
         }
 
-        //public string IdString
-        //{
-        //    get { return id; }
-        //}
+        /// <summary>
+        /// Gets the billing company identifier.
+        /// </summary>
+        /// <value>
+        /// The billing company identifier.
+        /// </value>
+        public BillingCompanyId billingCompanyId
+        {
+            get { return _billingCompanyId; }
+        }
 
-        ////public string IdString
-        ////{
-        ////    get { return id; }
-        ////}
+        /// <summary>
+        /// Gets the name of the company.
+        /// </summary>
+        /// <value>
+        /// The name of the company.
+        /// </value>
+        public string CompanyName
+        {
+            get { return companyName; }
+        }
 
         /// <summary>
         /// Value objects compare by the values of their attributes, they don't have an identity.

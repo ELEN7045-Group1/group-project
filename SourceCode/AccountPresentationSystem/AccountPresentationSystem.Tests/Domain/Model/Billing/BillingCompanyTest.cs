@@ -30,7 +30,8 @@
             BillingCompany billingCompany = new BillingCompany(billingCompanyId, billingCompanyName);
 
             //Assert
-            Assert.AreEqual(billingCompanyId, billingCompany);
+            Assert.AreEqual(billingCompanyId, billingCompany.billingCompanyId);
+            Assert.AreEqual(billingCompanyName, billingCompany.CompanyName);
 
         }
     }

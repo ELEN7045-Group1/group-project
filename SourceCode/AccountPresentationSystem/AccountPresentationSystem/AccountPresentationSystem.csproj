@@ -86,8 +86,12 @@
     <Compile Include="Domain\Model\Credentials\APSUser.cs" />
     <Compile Include="Domain\Model\Credentials\APSUserId.cs" />
     <Compile Include="Domain\Model\Scheduling\IScheduleRepository.cs" />
+    <Compile Include="Domain\Model\Scheduling\IScheduleRule.cs" />
+    <Compile Include="Domain\Model\Scheduling\RetryIntervalRule.cs" />
     <Compile Include="Domain\Model\Scheduling\Schedule.cs" />
     <Compile Include="Domain\Model\Scheduling\ScheduleRepository.cs" />
+    <Compile Include="Domain\Model\Scheduling\StatementLifeCycleRule.cs" />
+    <Compile Include="Domain\Model\Scheduling\WindowPeriodRule.cs" />
     <Compile Include="Domain\Service\LoadManagerService.cs" />
     <Compile Include="Domain\Service\SchedulerService.cs" />
     <Compile Include="Domain\Model\StatementHandler\Statement.cs" />

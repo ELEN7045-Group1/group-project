@@ -5,7 +5,7 @@ using System.Web;
 
 namespace AccountPresentationSystem.Domain.StatementHandler
 {
-    public class StatementNumberFomatter
+    public class StatementType
     {
     }
 }

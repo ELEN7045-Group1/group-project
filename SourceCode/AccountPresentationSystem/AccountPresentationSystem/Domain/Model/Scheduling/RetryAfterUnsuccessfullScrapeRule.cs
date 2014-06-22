@@ -5,7 +5,7 @@ using System.Web;
 
 namespace AccountPresentationSystem.Domain.Model.Scheduling
 {
-    public class RetryIntervalRule : IScheduleRule
+    public class RetryAfterUnsuccessfullScrapeRule : IScheduleRule
     {
         public bool RuleIsSatisfiedBy(Schedule schedule)
         {

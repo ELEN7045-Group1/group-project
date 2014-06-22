@@ -81,11 +81,15 @@
     <Compile Include="Domain\Model\Billing\BillingCompanyTest.cs" />
     <Compile Include="Domain\Model\Credentials\APSUserIdTest.cs" />
     <Compile Include="Domain\Model\Credentials\APSUserTest.cs" />
+    <Compile Include="Domain\Model\StatementHandler\StatementCommonFieldsTest.cs" />
+    <Compile Include="Domain\Model\StatementHandler\StatementSpecificFieldsTest.cs" />
+    <Compile Include="Domain\Model\StatementHandler\StatementTypeTest.cs" />
     <Compile Include="Domain\Service\LoadManagerServiceTest.cs" />
     <Compile Include="Domain\Service\SchedulerServiceTest.cs" />
-    <Compile Include="Domain\Model\StatementHandler\StatementDataIntegrityTest.cs" />
-    <Compile Include="Domain\Model\StatementHandler\StatementNumberFormatterTest.cs" />
+    <Compile Include="Domain\Service\StatementDataIntegrityCheckTest.cs" />
+    <Compile Include="Domain\Service\StatementFormatterTest.cs" />
     <Compile Include="Domain\Model\StatementHandler\StatementTest.cs" />
+    <Compile Include="Domain\Service\StatementGeneratorTest.cs" />
     <Compile Include="Intrastructure\LoggingTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

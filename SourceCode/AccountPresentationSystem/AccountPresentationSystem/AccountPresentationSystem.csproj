@@ -85,6 +85,9 @@
     <Compile Include="Domain\Model\Billing\BillingCompanyId.cs" />
     <Compile Include="Domain\Model\Credentials\APSUser.cs" />
     <Compile Include="Domain\Model\Credentials\APSUserId.cs" />
+    <Compile Include="Domain\Model\LoadManagement\IScrapeDataRepository.cs" />
+    <Compile Include="Domain\Model\LoadManagement\ScrapeData.cs" />
+    <Compile Include="Domain\Model\LoadManagement\ScrapeDataRepository.cs" />
     <Compile Include="Domain\Model\Scheduling\IScheduleRepository.cs" />
     <Compile Include="Domain\Model\Scheduling\IScheduleRule.cs" />
     <Compile Include="Domain\Model\Scheduling\RetryAfterUnsuccessfullScrapeRule.cs" />
@@ -125,7 +128,6 @@
     <Folder Include="Application\" />
     <Folder Include="Domain\Model\DataIntegrity\" />
     <Folder Include="Domain\Model\ErrorHandling\" />
-    <Folder Include="Domain\Model\LoadManagement\" />
     <Folder Include="Interface\" />
     <Folder Include="Messages\Response_Messages\" />
     <Folder Include="Presentation\" />

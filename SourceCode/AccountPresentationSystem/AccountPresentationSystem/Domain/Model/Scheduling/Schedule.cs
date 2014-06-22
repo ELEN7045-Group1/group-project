@@ -11,13 +11,8 @@ namespace AccountPresentationSystem.Domain.Model.Scheduling
         public DateTime StartTime { get; set; }
         public TimeSpan ScrapeWindow { get; set; }
 
-       // private IScheduleRepository scheduleRepository;
-
-        public Schedule(/*IScheduleRepository ScheduleRepo*/)
+        public Schedule()
         {
-           // scheduleRepository = ScheduleRepo;
-
-            
         }
 
         public bool SameValueAs(Schedule other)

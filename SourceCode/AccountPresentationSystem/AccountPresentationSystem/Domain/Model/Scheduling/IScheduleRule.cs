@@ -8,6 +8,5 @@ namespace AccountPresentationSystem.Domain.Model.Scheduling
 {
     interface IScheduleRule
     {
-        bool RuleIsSatisfiedBy(Schedule schedule);
     }
 }

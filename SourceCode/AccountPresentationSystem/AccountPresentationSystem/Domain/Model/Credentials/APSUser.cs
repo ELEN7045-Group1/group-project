@@ -1,19 +1,21 @@
 ﻿namespace AccountPresentationSystem.Domain.Model.Credentials
 {
-    using NDDDSample.Domain.Shared;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Web;
+    using AccountPresentationSystem.Domain.Model.Billing;
+using NDDDSample.Domain.Shared;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 
     /// <summary>
     /// APS user refers refers to the users of the APS system
     /// </summary>
-    public class APSUser : IEntity<APSUser>
+    public class APSUser :IEntity<APSUser>
     {
         private readonly APSUserId _apsUserId;
         private readonly string _apsUserName;
         private readonly string _apsPassword;
+        private readonly List<BillingAccount> _billingAccounts;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="APSUser"/> class.
@@ -30,6 +32,19 @@
                 this._apsUserId = apsUserId;
                 this._apsUserName = username;
                 this._apsPassword = password;
+                this._billingAccounts = new List<BillingAccount>();
+            }
+            else
+            {
+                throw new ArgumentNullException();
+            }
+        }
+
+        public void  AddBillingAccount(BillingAccount billingAccount)
+        {
+            if (billingAccount!= null)
+            {
+                _billingAccounts.Add(billingAccount);
             }
             else
             {
@@ -68,6 +83,11 @@
         public string APSPassword
         {
             get { return _apsPassword; }
+        }
+
+        public List<BillingAccount> BillingAccounts
+        {
+            get { return _billingAccounts; }
         }
 
         /// <summary>

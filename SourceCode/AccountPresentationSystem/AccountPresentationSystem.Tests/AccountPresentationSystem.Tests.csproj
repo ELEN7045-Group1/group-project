@@ -77,6 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Domain\Model\Billing\BillingAccountIdTest.cs" />
+    <Compile Include="Domain\Model\Billing\BillingAccountTest.cs" />
     <Compile Include="Domain\Model\Billing\BillingCompanyIdTest.cs" />
     <Compile Include="Domain\Model\Billing\BillingCompanyTest.cs" />
     <Compile Include="Domain\Model\Credentials\APSUserIdTest.cs" />

@@ -84,6 +84,9 @@
     <Compile Include="Domain\Model\Billing\BillingAccountId.cs" />
     <Compile Include="Domain\Model\Billing\BillingCompany.cs" />
     <Compile Include="Domain\Model\Billing\BillingCompanyId.cs" />
+    <Compile Include="Domain\Model\LoadManagement\IScrapeDataRepository.cs" />
+    <Compile Include="Domain\Model\LoadManagement\ScrapeData.cs" />
+    <Compile Include="Domain\Model\LoadManagement\ScrapeDataRepository.cs" />
     <Compile Include="Domain\Model\APSUser\APSUser.cs" />
     <Compile Include="Domain\Model\APSUser\APSUserId.cs" />
     <Compile Include="Domain\Model\Billing\BillingCompanyRepository.cs" />
@@ -128,7 +131,6 @@
     <Folder Include="Application\" />
     <Folder Include="Domain\Model\DataIntegrity\" />
     <Folder Include="Domain\Model\ErrorHandling\" />
-    <Folder Include="Domain\Model\LoadManagement\" />
     <Folder Include="Interface\" />
     <Folder Include="Messages\Response_Messages\" />
     <Folder Include="Presentation\" />

@@ -1,11 +1,11 @@
-﻿namespace AccountPresentationSystem.Domain.Model.Credentials
+﻿namespace AccountPresentationSystem.Domain.Model.APSUser
 {
     using AccountPresentationSystem.Domain.Model.Billing;
-using NDDDSample.Domain.Shared;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+    using NDDDSample.Domain.Shared;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web;
 
     /// <summary>
     /// APS user refers refers to the users of the APS system

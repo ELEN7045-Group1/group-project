@@ -1,6 +1,6 @@
 ﻿namespace AccountPresentationSystem.Domain.Model.Billing
 {
-    using AccountPresentationSystem.Domain.Model.Credentials;
+    using AccountPresentationSystem.Domain.Model.APSUser;
 using System;
 using System.Collections.Generic;
 using System.Linq;

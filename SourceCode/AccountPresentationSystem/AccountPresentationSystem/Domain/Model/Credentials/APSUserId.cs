@@ -1,4 +1,4 @@
-﻿namespace AccountPresentationSystem.Domain.Credentials
+﻿namespace AccountPresentationSystem.Domain.Model.Credentials
 {
     using NDDDSample.Domain.Shared;
     using System;

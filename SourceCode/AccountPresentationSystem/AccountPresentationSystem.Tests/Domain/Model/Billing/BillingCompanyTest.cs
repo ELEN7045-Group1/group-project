@@ -1,6 +1,6 @@
-﻿namespace AccountPresentationSystem.Tests.Domain.Billing
+﻿namespace AccountPresentationSystem.Tests.Domain.Model.Billing
 {
-    using AccountPresentationSystem.Domain.Billing;
+    using AccountPresentationSystem.Domain.Model.Billing;
     using NUnit.Framework;
     using System;
     using System.Collections.Generic;

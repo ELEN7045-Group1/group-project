@@ -1,4 +1,4 @@
-﻿namespace AccountPresentationSystem.Domain.Billing
+﻿namespace AccountPresentationSystem.Domain.Model.Billing
 {
     using NDDDSample.Domain.Shared;
     using System;

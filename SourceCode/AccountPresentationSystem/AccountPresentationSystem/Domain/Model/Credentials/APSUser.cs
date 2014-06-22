@@ -1,4 +1,4 @@
-﻿namespace AccountPresentationSystem.Domain.Credentials
+﻿namespace AccountPresentationSystem.Domain.Model.Credentials
 {
     using System;
     using System.Collections.Generic;

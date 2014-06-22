@@ -1,6 +1,6 @@
-﻿namespace AccountPresentationSystem.Tests.Domain.Credentials
+﻿namespace AccountPresentationSystem.Tests.Domain.Model.Credentials
 {
-    using AccountPresentationSystem.Domain.Credentials;
+    using AccountPresentationSystem.Domain.Model.Credentials;
     using NUnit.Framework;
     using System;
     using System.Collections.Generic;

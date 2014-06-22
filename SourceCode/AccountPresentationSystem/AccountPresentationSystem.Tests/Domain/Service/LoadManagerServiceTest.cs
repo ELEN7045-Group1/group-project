@@ -12,7 +12,7 @@ namespace AccountPresentationSystem.Tests.Domain.Service
     public class LoadManagerServiceTest
     {
         [Test]
-        public void CreateScheduleTest()
+        public void CreateLoadManagerTest()
         {
             // Arrange
             LoadManagerService MyService = new LoadManagerService();

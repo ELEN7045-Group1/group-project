@@ -13,7 +13,7 @@ namespace AccountPresentationSystem.Tests.Intrastructure
     public class LoggingTest
     {
         [Test]
-        public void CreateScheduleTest()
+        public void CreateLoggingTest()
         {
             // Arrange
             Logging MyService = new Logging();

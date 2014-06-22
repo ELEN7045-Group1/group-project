@@ -80,7 +80,9 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\Model\APSUser\APSUserRepoTest.cs" />
     <Compile Include="Domain\Model\Billing\BillingAccountIdTest.cs" />
+    <Compile Include="Domain\Model\Billing\BillingAccountRepoTest.cs" />
     <Compile Include="Domain\Model\Billing\BillingAccountTest.cs" />
     <Compile Include="Domain\Model\Billing\BillingCompanyIdTest.cs" />
     <Compile Include="Domain\Model\Billing\BillingCompanyRepoTest.cs" />

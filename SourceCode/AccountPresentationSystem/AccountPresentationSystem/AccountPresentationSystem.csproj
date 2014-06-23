@@ -115,6 +115,7 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="packages.config" />
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -138,10 +139,15 @@
     <Compile Include="Domain\Model\Billing\BillingCompany.cs" />
     <Compile Include="Domain\Model\Billing\BillingCompanyId.cs" />
     <Compile Include="Domain\Model\Billing\IBillingAccountRepository.cs" />
-    <Compile Include="Domain\Model\DataIntegrity\DataIntegrityChecker.cs" />
     <Compile Include="Domain\Model\DataIntegrity\DataIntegrityCustomRule.cs" />
     <Compile Include="Domain\Model\DataIntegrity\DataIntegrityRule.cs" />
     <Compile Include="Domain\Model\DataIntegrity\IDataIntegrityRuleRepository.cs" />
+    <Compile Include="Domain\Model\ErrorHandling\BillingCompanySiteDown.cs" />
+    <Compile Include="Domain\Model\ErrorHandling\BrokenScript.cs" />
+    <Compile Include="Domain\Model\ErrorHandling\CustomerActionRequired.cs" />
+    <Compile Include="Domain\Model\ErrorHandling\IErrorCondition.cs" />
+    <Compile Include="Domain\Model\ErrorHandling\InvalidCredentials.cs" />
+    <Compile Include="Domain\Model\ErrorHandling\NotAneBillingCustomer.cs" />
     <Compile Include="Domain\Model\LoadManagement\IScrapeDataRepository.cs" />
     <Compile Include="Domain\Model\LoadManagement\ScrapeData.cs" />
     <Compile Include="Domain\Model\LoadManagement\ScrapeDataRepository.cs" />
@@ -189,7 +195,6 @@
     <Compile Include="Domain\Shared\OrSpecification.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Domain\Model\ErrorHandling\" />
     <Folder Include="Interface\" />
     <Folder Include="Messages\Response_Messages\" />
     <Folder Include="Presentation\" />

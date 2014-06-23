@@ -9,7 +9,5 @@ namespace AccountPresentationSystem.Domain.Model.DataIntegrity
     public interface IDataIntegrityRuleRepository
     {
         List<DataIntegrityRule> GetAllIntegrityRules();
-
-        DataIntegrityRule GetIntegrityRuleByID(DataIntegrityRuleID integrityRuleId);
     }
 }

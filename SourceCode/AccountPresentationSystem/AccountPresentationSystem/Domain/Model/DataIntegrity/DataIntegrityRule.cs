@@ -7,9 +7,14 @@
     using System.Web;
 
 
-    public class DataIntegrityRule :IEntity<DataIntegrityRule>
+    public class DataIntegrityRule :IValueObject<DataIntegrityRule>
     {
-        public virtual bool SameIdentityAs(DataIntegrityRule other)
+        public DataIntegrityRule()
+        {
+
+        }
+
+        public bool SameValueAs(DataIntegrityRule other)
         {
             return true;
         }

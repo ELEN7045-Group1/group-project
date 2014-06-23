@@ -138,9 +138,9 @@
     <Compile Include="Domain\Model\Billing\BillingCompany.cs" />
     <Compile Include="Domain\Model\Billing\BillingCompanyId.cs" />
     <Compile Include="Domain\Model\Billing\IBillingAccountRepository.cs" />
+    <Compile Include="Domain\Model\DataIntegrity\DataIntegrityChecker.cs" />
     <Compile Include="Domain\Model\DataIntegrity\DataIntegrityRule.cs" />
     <Compile Include="Domain\Model\DataIntegrity\IDataIntegrityRuleRepository.cs" />
-    <Compile Include="Domain\Model\DataIntegrity\DataIntegrityRuleID.cs" />
     <Compile Include="Domain\Model\LoadManagement\IScrapeDataRepository.cs" />
     <Compile Include="Domain\Model\LoadManagement\ScrapeData.cs" />
     <Compile Include="Domain\Model\LoadManagement\ScrapeDataRepository.cs" />

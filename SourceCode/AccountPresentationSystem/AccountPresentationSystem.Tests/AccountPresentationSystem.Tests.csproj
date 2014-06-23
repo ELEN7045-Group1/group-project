@@ -114,6 +114,7 @@
     <Compile Include="Domain\Model\Billing\BillingCompanyTest.cs" />
     <Compile Include="Domain\Model\APSUser\APSUserIdTest.cs" />
     <Compile Include="Domain\Model\APSUser\APSUserTest.cs" />
+    <Compile Include="Domain\Model\DataIntegrity\DataIntegrityRuleRepoTest.cs" />
     <Compile Include="Domain\Model\LoadManagement\LoadManagerTest.cs" />
     <Compile Include="Domain\Model\Schedule\TimeOfDayTest.cs" />
     <Compile Include="Domain\Model\StatementHandler\StatementCommonFieldsTest.cs" />
@@ -139,7 +140,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Domain\Model\DataIntegrity\" />
     <Folder Include="Domain\Model\ErrorHandling\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

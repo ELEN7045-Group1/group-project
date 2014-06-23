@@ -37,5 +37,25 @@
 
             return billingCompanies;
         }
+
+        /// <summary>
+        /// Gets the billing company by identifier.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <returns></returns>
+        public BillingCompany GetBillingCompanyNameById(string id)
+        {
+            DataTable dt = dataConnection.SelectQuery("Select query to retrieve All Billing Companies");
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                if (dt.Rows.Count == 1)
+                {
+                    return  new BillingCompany((BillingCompanyId) dr["billingCompanyId"],(string)dr["companyName"]);
+                }
+            }
+
+            return new BillingCompany(new BillingCompanyId("0"),"No Company Found");
+        }
     }
 }

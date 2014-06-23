@@ -134,6 +134,7 @@
     <Compile Include="Domain\Model\APSUser\APSUserRepository.cs" />
     <Compile Include="Domain\Model\APSUser\IAPSUserRepository.cs" />
     <Compile Include="Domain\Model\Billing\BillingAccount.cs" />
+    <Compile Include="Domain\Model\Billing\BillingAccountFactory.cs" />
     <Compile Include="Domain\Model\Billing\BillingAccountId.cs" />
     <Compile Include="Domain\Model\Billing\BillingAccountRepository.cs" />
     <Compile Include="Domain\Model\Billing\BillingCompany.cs" />
@@ -166,6 +167,8 @@
     <Compile Include="Domain\Model\Scheduling\WindowPeriodRuleRepository.cs" />
     <Compile Include="Domain\Model\StatementHandler\StatementCommonFields.cs" />
     <Compile Include="Domain\Model\StatementHandler\StatementSpecificFields.cs" />
+    <Compile Include="Domain\Service\BillingAccountService.cs" />
+    <Compile Include="Domain\Service\IBillingAccountService.cs" />
     <Compile Include="Domain\Service\LoadManagerService.cs" />
     <Compile Include="Domain\Service\SchedulerCreatorService.cs" />
     <Compile Include="Domain\Model\StatementHandler\Statement.cs" />

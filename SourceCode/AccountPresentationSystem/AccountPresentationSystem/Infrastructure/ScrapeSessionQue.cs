@@ -4,7 +4,7 @@ using System.Linq;
 using System.Messaging;
 using System.Web;
 using AccountPresentationSystem.Messages.Request_Messages;
-using NDDDSample.Domain.Shared;
+using AccountPresentationSystem.Domain.Shared;
 
 namespace AccountPresentationSystem.Infrastructure
 {

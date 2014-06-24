@@ -1,5 +1,5 @@
 ﻿using AccountPresentationSystem.Domain.Model.Billing;
-using NDDDSample.Domain.Shared;
+using AccountPresentationSystem.Domain.Shared;
 using System;
 using System.Collections.Generic;
 using System.Linq;

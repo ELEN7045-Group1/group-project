@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AccountPresentationSystem.Infrastructure;
-using NDDDSample.Domain.Shared;
+using AccountPresentationSystem.Domain.Shared;
 using NUnit.Framework;
 
 namespace AccountPresentationSystem.Tests.Intrastructure

@@ -1,4 +1,4 @@
-namespace NDDDSample.Domain.Shared
+namespace AccountPresentationSystem.Domain.Shared
 {
     /// <summary>
     /// A value object, as described in the DDD book.

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using NDDDSample.Domain.Shared;
+using AccountPresentationSystem.Domain.Shared;
 
 namespace AccountPresentationSystem.Messages.Request_Messages
 {

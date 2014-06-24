@@ -1,4 +1,4 @@
-namespace NDDDSample.Domain.Shared
+namespace AccountPresentationSystem.Domain.Shared
 {
     /// <summary>
     /// AND specification, used to create a new specifcation that is the AND of two other specifications.

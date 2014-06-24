@@ -1,4 +1,4 @@
-namespace NDDDSample.Domain.Shared
+namespace AccountPresentationSystem.Domain.Shared
 {
     /// <summary>
     ///A domain event is something that is unique, but does not have a lifecycle.

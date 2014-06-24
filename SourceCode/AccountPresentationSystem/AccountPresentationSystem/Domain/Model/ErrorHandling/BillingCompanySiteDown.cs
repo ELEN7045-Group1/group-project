@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using AccountPresentationSystem.Domain.Shared;
 
 namespace AccountPresentationSystem.Domain.Model.ErrorHandling
 {
@@ -13,13 +14,13 @@ namespace AccountPresentationSystem.Domain.Model.ErrorHandling
         /// <param name="errorCode">Error Code for the detected error condition</param>
         /// <param name="baseURL">Billing company's base URL</param>
         /// <param name="timeDetected">When was the error detected</param>
-        public BillingCompanySiteDown(int errorCode, string baseURL, DateTime timeDetected)
+        public BillingCompanySiteDown(Enumeration.ErrorCode errorCode, string baseURL, DateTime timeDetected)
         {
             ErrorCode = errorCode;
             BaseURL = baseURL;
             TimeDetected = timeDetected;
         }
-        public int ErrorCode
+        public Enumeration.ErrorCode ErrorCode
         {
             get
             {

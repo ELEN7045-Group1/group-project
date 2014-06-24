@@ -6,7 +6,7 @@ using AccountPresentationSystem.Domain.Shared;
 
 namespace AccountPresentationSystem.Domain.Model.ErrorHandling
 {
-    public class CustomerActionRequired : IErrorCondition
+    public class IncorrectAccount: IErrorCondition
     {
         /// <summary>
         /// Initialises an ErrorCondition object
@@ -14,7 +14,7 @@ namespace AccountPresentationSystem.Domain.Model.ErrorHandling
         /// <param name="errorCode">Error Code for the detected error condition</param>
         /// <param name="baseURL">Billing company's base URL</param>
         /// <param name="timeDetected">When was the error detected</param>
-        public CustomerActionRequired(Enumeration.ErrorCode errorCode, string baseURL, DateTime timeDetected)
+        public IncorrectAccount(Enumeration.ErrorCode errorCode, string baseURL, DateTime timeDetected)
         {
             ErrorCode = errorCode;
             BaseURL = baseURL;
@@ -55,6 +55,7 @@ namespace AccountPresentationSystem.Domain.Model.ErrorHandling
                 throw new NotImplementedException();
             }
         }
+
 
         public void ActOnError(Billing.BillingAccount billingAccount = null)
         {

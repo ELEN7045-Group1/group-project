@@ -1,4 +1,4 @@
-﻿namespace NDDDSample.Domain.Shared
+﻿namespace AccountPresentationSystem.Domain.Shared
 {
     #region Usings
 
@@ -41,6 +41,18 @@
             Low = 1,
             Medium = 2,
             High = 3,
+        }
+
+        public enum ErrorCode : int
+        {
+            BrokenScript,
+            BillingCompanySiteDown,
+            CustomerActionRequired,
+            DataIntegrityCheckingFailed,
+            IncorrectAccount,
+            InvalidCredentials,
+            NotAneBillingCustomer,
+            UnableToCheckDataIntegrity
         }
 
         #region IComparable Members

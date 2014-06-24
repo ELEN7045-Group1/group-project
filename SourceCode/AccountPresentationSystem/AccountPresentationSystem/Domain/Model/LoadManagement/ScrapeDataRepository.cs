@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Web;
 using AccountPresentationSystem.Infrastructure;
-using NDDDSample.Domain.Shared;
+using AccountPresentationSystem.Domain.Shared;
 
 namespace AccountPresentationSystem.Domain.Model.LoadManagement
 {

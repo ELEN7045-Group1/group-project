@@ -146,9 +146,12 @@
     <Compile Include="Domain\Model\ErrorHandling\BillingCompanySiteDown.cs" />
     <Compile Include="Domain\Model\ErrorHandling\BrokenScript.cs" />
     <Compile Include="Domain\Model\ErrorHandling\CustomerActionRequired.cs" />
+    <Compile Include="Domain\Model\ErrorHandling\DataIntegrityCheckingFailed.cs" />
     <Compile Include="Domain\Model\ErrorHandling\IErrorCondition.cs" />
+    <Compile Include="Domain\Model\ErrorHandling\IncorrectAccount.cs" />
     <Compile Include="Domain\Model\ErrorHandling\InvalidCredentials.cs" />
     <Compile Include="Domain\Model\ErrorHandling\NotAneBillingCustomer.cs" />
+    <Compile Include="Domain\Model\ErrorHandling\UnableToCheckDataIntegrity.cs" />
     <Compile Include="Domain\Model\LoadManagement\IScrapeDataRepository.cs" />
     <Compile Include="Domain\Model\LoadManagement\ScrapeData.cs" />
     <Compile Include="Domain\Model\LoadManagement\ScrapeDataRepository.cs" />

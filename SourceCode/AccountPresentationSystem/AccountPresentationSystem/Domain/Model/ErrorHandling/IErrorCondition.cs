@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AccountPresentationSystem.Domain.Model.Billing;
+using AccountPresentationSystem.Domain.Shared;
 
 namespace AccountPresentationSystem.Domain.Model.ErrorHandling
 {
@@ -18,7 +19,7 @@ namespace AccountPresentationSystem.Domain.Model.ErrorHandling
         /// <summary>
         /// Error code if the type of error can be detected
         /// </summary>
-        int ErrorCode
+        Enumeration.ErrorCode ErrorCode
         {
             get;
             set;

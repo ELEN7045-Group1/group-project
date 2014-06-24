@@ -1,4 +1,4 @@
-namespace NDDDSample.Domain.Shared
+namespace AccountPresentationSystem.Domain.Shared
 {
     /// <summary>
     /// NOT decorator, used to create a new specifcation that is the inverse (NOT) of the given spec.

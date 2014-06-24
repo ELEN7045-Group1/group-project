@@ -1,4 +1,4 @@
-﻿namespace NDDDSample.Domain.Shared
+﻿namespace AccountPresentationSystem.Domain.Shared
 {
     /// <summary>
     /// An entity, as explained in the DDD book.

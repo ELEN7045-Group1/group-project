@@ -1,4 +1,4 @@
-namespace NDDDSample.Domain.Shared
+namespace AccountPresentationSystem.Domain.Shared
 {
     /// <summary>
     /// Utility code for domain classes.

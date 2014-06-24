@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using AccountPresentationSystem.Domain.Model.Billing;
 using AccountPresentationSystem.Domain.Shared;
+using AccountPresentationSystem.Infrastructure;
 
 namespace AccountPresentationSystem.Domain.Model.ErrorHandling
 {
@@ -59,7 +61,14 @@ namespace AccountPresentationSystem.Domain.Model.ErrorHandling
 
         public void ActOnError(Billing.BillingAccount billingAccount = null)
         {
-            throw new NotImplementedException();
+            if (billingAccount != null)
+            {
+                var billingCompany = new BillingCompanyRepository(new DBConnection()).GetBillingCompanyNameById(billingAccount.BillingCompanyId.IdString);
+                if (billingCompany != null)
+                {
+                    new Logging().LogMessage(Enumeration.LoggingPriority.Low, "123", string.Format("The script for {0} has been broken", billingCompany.CompanyName));
+                }
+            }
         }
     }
 }

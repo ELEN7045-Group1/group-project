@@ -11,7 +11,7 @@ namespace AccountPresentationSystem.Domain.Model.StatementHandler
 {
     public class StatementRepository
     {
-        private readonly IDBConnection dataConnection;
+        //private readonly IDBConnection dataConnection;
 
         public StatementRepository()
         {
@@ -20,13 +20,13 @@ namespace AccountPresentationSystem.Domain.Model.StatementHandler
 
         public bool SaveStatement()
         {
-            //This method will save the statement to the the statement repo didn't build the logic here
+            //This method will save the statement to the the statement repo didn't build the logic yet
             return true;
         }
 
         public List<Statement> GetStatement()
         {
-            //This method will save the statement to the the statement repo didn't build the logic here
+            //This method will save the statement to the the statement repo didn't build the logic yet
             List<Statement> _statement = new List<Statement>();
             return _statement;
         }

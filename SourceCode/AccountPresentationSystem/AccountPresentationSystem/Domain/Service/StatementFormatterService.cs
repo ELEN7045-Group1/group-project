@@ -7,7 +7,6 @@ namespace AccountPresentationSystem.Domain.Service
 {
     public class StatementFormatterService
     {
-        //This would fomat the scraped data which is xml into a statement
-        //This statement would then be stored on the Statement repo 
+        //This would format the scraped data which is xml into a statement object used by the statement formatter
     }
 }

@@ -114,7 +114,9 @@
     <Compile Include="Domain\Model\Billing\BillingCompanyTest.cs" />
     <Compile Include="Domain\Model\APSUser\APSUserIdTest.cs" />
     <Compile Include="Domain\Model\APSUser\APSUserTest.cs" />
+    <Compile Include="Domain\Model\DataIntegrity\DataIntegrityCustomRuleTest.cs" />
     <Compile Include="Domain\Model\DataIntegrity\DataIntegrityRuleRepoTest.cs" />
+    <Compile Include="Domain\Model\DataIntegrity\DataIntegrityRuleTest.cs" />
     <Compile Include="Domain\Model\LoadManagement\LoadManagerTest.cs" />
     <Compile Include="Domain\Model\Schedule\TimeOfDayTest.cs" />
     <Compile Include="Domain\Model\StatementHandler\StatementCommonFieldsTest.cs" />

@@ -13,7 +13,31 @@
     class DataIntegrityRuleRepoTest
     {
         [Test]
-        public void Get_DataIntegrityRules_ExpectRepoMethodCalled()
+        public void GetStandardDataIntegrityRules_ExpectRepoMethodCalled()
+        {
+            var repository = MockRepository.GenerateMock<IDataIntegrityRuleRepository>();
+
+            repository.Expect(r => r.GetStandardIntegrityRules());
+
+            repository.GetStandardIntegrityRules();
+
+            repository.VerifyAllExpectations();
+        }
+
+        [Test]
+        public void GetCustomDataIntegrityRules_ExpectRepoMethodCalled()
+        {
+            var repository = MockRepository.GenerateMock<IDataIntegrityRuleRepository>();
+
+            repository.Expect(r => r.GetCustomIntegrityRules());
+
+            repository.GetCustomIntegrityRules();
+
+            repository.VerifyAllExpectations();
+        }
+
+        [Test]
+        public void GetDataIntegrityRules_ExpectRepoMethodCalled()
         {
             var repository = MockRepository.GenerateMock<IDataIntegrityRuleRepository>();
 

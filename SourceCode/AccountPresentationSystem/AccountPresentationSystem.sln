@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30110.0
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountPresentationSystem", "AccountPresentationSystem\AccountPresentationSystem.csproj", "{AFFED10C-AE82-470E-ADA3-A91BB3D391DC}"
 EndProject
@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{20CAEB
 	ProjectSection(SolutionItems) = preProject
 		.nuget\packages.config = .nuget\packages.config
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleWebFrontend", "SimpleWebFrontend\SimpleWebFrontend.csproj", "{4D0EB7F2-3EB8-4046-96DA-7CDACC774B0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +28,10 @@ Global
 		{1FA21D69-E96A-495C-9D0D-3A7508CBB451}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FA21D69-E96A-495C-9D0D-3A7508CBB451}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FA21D69-E96A-495C-9D0D-3A7508CBB451}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D0EB7F2-3EB8-4046-96DA-7CDACC774B0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D0EB7F2-3EB8-4046-96DA-7CDACC774B0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D0EB7F2-3EB8-4046-96DA-7CDACC774B0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D0EB7F2-3EB8-4046-96DA-7CDACC774B0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

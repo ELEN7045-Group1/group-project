@@ -4,3 +4,10 @@
     APSError,
     NoNewStatementError
 }
+
+public enum StatementTypesList
+{
+    Municipalities,
+    CreditCardProviders,
+    TelcoServicesProviders
+}

@@ -168,14 +168,19 @@
     <Compile Include="Domain\Model\Scheduling\TimeOfDay.cs" />
     <Compile Include="Domain\Model\Scheduling\WindowPeriodRule.cs" />
     <Compile Include="Domain\Model\Scheduling\WindowPeriodRuleRepository.cs" />
+    <Compile Include="Domain\Model\StatementHandler\IStatementRepository.cs" />
+    <Compile Include="Domain\Model\StatementHandler\Statement.cs" />
     <Compile Include="Domain\Model\StatementHandler\StatementCommonFields.cs" />
+    <Compile Include="Domain\Model\StatementHandler\StatementId.cs" />
+    <Compile Include="Domain\Model\StatementHandler\StatementRepository.cs" />
     <Compile Include="Domain\Model\StatementHandler\StatementSpecificFields.cs" />
+    <Compile Include="Domain\Model\StatementHandler\StatementType.cs" />
     <Compile Include="Domain\Service\BillingAccountService.cs" />
     <Compile Include="Domain\Service\IBillingAccountService.cs" />
     <Compile Include="Domain\Service\LoadManagerService.cs" />
     <Compile Include="Domain\Service\SchedulerCreatorService.cs" />
-    <Compile Include="Domain\Model\StatementHandler\Statement.cs" />
-    <Compile Include="Domain\Model\StatementHandler\StatementType.cs" />
+    <Compile Include="Domain\Service\StatementFormatterService.cs" />
+    <Compile Include="Domain\Service\StatementGenerator.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

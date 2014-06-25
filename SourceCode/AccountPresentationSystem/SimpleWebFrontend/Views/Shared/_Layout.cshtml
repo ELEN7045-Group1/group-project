@@ -27,7 +27,7 @@
 
                     @if (HttpContext.Current.User.Identity.IsAuthenticated)
                     {
-                        <li>@Html.ActionLink("My Statements", "Index", "Statement")</li>
+                        <li>@Html.ActionLink("My Statements", "Index", "Statements")</li>
                     }
                 </ul>
                 @Html.Partial("_LoginPartial")

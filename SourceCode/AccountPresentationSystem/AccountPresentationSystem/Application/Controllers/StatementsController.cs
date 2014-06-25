@@ -1,16 +1,17 @@
-﻿using System;
+﻿using AccountPresentationSystem.Domain.Model.StatementHandler;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using AccountPresentationSystem.Domain.Model.StatementHandler;
-using AccountPresentationSystem.Domain.Model.APSUser;
-using System.Threading.Tasks;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
 
-namespace SimpleWebFrontend.Repositories
+namespace AccountPresentationSystem.Application.Controllers
 {
-    public class FakeStatementRepository : IStatementRepository
+    public class StatementsController : ApiController
     {
-        public async Task<List<Statement>> GetAllStatementsPerUser(APSUserId UserID)
+        // GET: api/Statements
+        public IEnumerable<Statement> Get()
         {
             List<Statement> retList = new List<Statement>();
 
@@ -19,6 +20,27 @@ namespace SimpleWebFrontend.Repositories
             retList.Add(new Statement(new StatementId("ID3"), new StatementCommonFields(4, "Paul", DateTime.Now), new StatementType(1, "Type 1"), new StatementSpecificFields("Total Amount", "580.30")));
 
             return retList;
+        }
+
+        // GET: api/Statements/5
+        public string Get(int id)
+        {
+            return "value";
+        }
+
+        // POST: api/Statements
+        public void Post([FromBody]string value)
+        {
+        }
+
+        // PUT: api/Statements/5
+        public void Put(int id, [FromBody]string value)
+        {
+        }
+
+        // DELETE: api/Statements/5
+        public void Delete(int id)
+        {
         }
     }
 }

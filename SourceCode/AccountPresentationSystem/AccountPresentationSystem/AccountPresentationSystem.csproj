@@ -128,6 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Application\Controllers\ScheduleController.cs" />
+    <Compile Include="Application\Controllers\StatementsController.cs" />
     <Compile Include="Application\Controllers\UserController.cs" />
     <Compile Include="App_Start\UnityResolver.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -209,6 +210,7 @@
     <Folder Include="Interface\" />
     <Folder Include="Messages\Response_Messages\" />
     <Folder Include="Presentation\" />
+    <Folder Include="Views\Statements\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

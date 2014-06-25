@@ -5,5 +5,8 @@
     <Setting Name="UseFakeRepos" Type="System.Boolean" Scope="Application">
       <Value Profile="(Default)">True</Value>
     </Setting>
+    <Setting Name="APSServiceURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:55775/</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

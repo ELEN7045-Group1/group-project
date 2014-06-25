@@ -10,6 +10,6 @@ namespace SimpleWebFrontend.Repositories
 {
     public interface IStatementRepository
     {
-        List<Statement> GetAllStatementsPerUser(APSUserId UserID);
+        Task<List<Statement>> GetAllStatementsPerUser(APSUserId UserID);
     }
 }

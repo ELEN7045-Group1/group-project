@@ -31,5 +31,14 @@ namespace SimpleWebFrontend.Properties {
                 return ((bool)(this["UseFakeRepos"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:55775/")]
+        public string APSServiceURL {
+            get {
+                return ((string)(this["APSServiceURL"]));
+            }
+        }
     }
 }

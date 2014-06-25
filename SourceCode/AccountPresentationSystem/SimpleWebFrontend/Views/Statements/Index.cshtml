@@ -38,7 +38,7 @@
                 @StatementItem.StatementSpecificFields.StatementFieldValue1
             </td>
             <td>
-                @Html.ActionLink("Details", "Details")
+                @Html.ActionLink("Details", "Details", new { id = StatementItem.StatementId.StatementIdString })
             </td>
         </tr>
     }

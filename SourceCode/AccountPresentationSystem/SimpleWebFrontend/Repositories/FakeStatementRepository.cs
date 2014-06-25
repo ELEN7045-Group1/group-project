@@ -20,5 +20,13 @@ namespace SimpleWebFrontend.Repositories
 
             return retList;
         }
+
+        public async Task<Statement> GetSpecificStatement(StatementId StatementId)
+        {
+            List<Statement> StatementList = await GetAllStatementsPerUser(new APSUserId("1"));
+
+            return StatementList.Where(x => x.StatementId.StatementIdString == StatementId.StatementIdString).FirstOrDefault();
+        }
+
     }
 }

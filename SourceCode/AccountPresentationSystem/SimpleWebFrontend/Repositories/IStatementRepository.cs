@@ -11,5 +11,6 @@ namespace SimpleWebFrontend.Repositories
     public interface IStatementRepository
     {
         Task<List<Statement>> GetAllStatementsPerUser(APSUserId UserID);
+        Task<Statement> GetSpecificStatement(StatementId StatementID);
     }
 }

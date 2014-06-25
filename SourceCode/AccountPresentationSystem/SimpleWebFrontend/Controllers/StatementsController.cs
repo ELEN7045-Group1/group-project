@@ -23,5 +23,12 @@ namespace SimpleWebFrontend.Controllers
             List<AccountPresentationSystem.Domain.Model.StatementHandler.Statement> Model = await StatementRepo.GetAllStatementsPerUser(new AccountPresentationSystem.Domain.Model.APSUser.APSUserId("1"));
             return View(Model);
         }
+
+        // GET: Statement
+        public async Task<ActionResult> Details(string Id)
+        {
+            AccountPresentationSystem.Domain.Model.StatementHandler.Statement Model = await StatementRepo.GetSpecificStatement(new AccountPresentationSystem.Domain.Model.StatementHandler.StatementId(Id));
+            return View(Model);
+        }
     }
 }

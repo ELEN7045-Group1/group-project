@@ -1,0 +1,51 @@
+﻿@model AccountPresentationSystem.Domain.Model.StatementHandler.Statement
+@{
+    ViewBag.Title = "Statement Details";
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+<table>
+    <tr>
+        <th colspan="10">Insert Company Here</th>
+    </tr>
+    <tr>
+        <th>
+            Account Number:
+        </th>
+        <td>
+            @Model.StatementCommonFields.StatementAccountNumber
+        </td>
+    </tr>
+    <tr>
+        <th>
+            Date:
+        </th>
+        <td>
+            @Model.StatementCommonFields.StatementDate
+        </td>
+    </tr>
+    <tr>
+        <th>
+            Statement Type:
+        </th>
+        <td>
+            @Model.StatementType.StatementTypeName
+        </td>
+    </tr>
+
+    <tr><td style="height:200px;">&nbsp;</td></tr>
+    
+    <tr>
+        <th>
+            @Model.StatementSpecificFields.StatementFieldName1
+        </th>
+        <td>
+            @Model.StatementSpecificFields.StatementFieldValue1
+        </td>
+    </tr>
+</table>
+
+<br />
+@Html.ActionLink("Back to statement list", "Index")

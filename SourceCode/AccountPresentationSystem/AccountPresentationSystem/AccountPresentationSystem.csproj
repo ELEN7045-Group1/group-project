@@ -210,7 +210,6 @@
     <Folder Include="Interface\" />
     <Folder Include="Messages\Response_Messages\" />
     <Folder Include="Presentation\" />
-    <Folder Include="Views\Statements\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

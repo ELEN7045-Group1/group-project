@@ -5,8 +5,6 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web.Security;
@@ -73,19 +71,6 @@ namespace RSMSWebPortal.Controllers
         #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
-
-        private void AddErrors(IdentityResult result)
-        {
-            foreach (var error in result.Errors)
-            {
-                ModelState.AddModelError("", error);
-            }
-        }
-
-        private void SendEmail(string email, string callbackUrl, string subject, string message)
-        {
-            // For information on sending mail, please visit http://go.microsoft.com/fwlink/?LinkID=320771
-        }
 
         public enum ManageMessageId
         {

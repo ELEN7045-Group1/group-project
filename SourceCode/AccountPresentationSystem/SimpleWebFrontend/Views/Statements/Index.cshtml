@@ -1,0 +1,45 @@
+﻿@model IEnumerable<AccountPresentationSystem.Domain.Model.StatementHandler.Statement>
+@{
+    ViewBag.Title = "My Statements";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>
+            Company
+        </th>
+        <th>
+            Account Number
+        </th>
+        <th>
+            Statement Date
+        </th>
+        <th>
+            Amount
+        </th>
+        <th>&nbsp;</th>
+    </tr>
+
+    @foreach (AccountPresentationSystem.Domain.Model.StatementHandler.Statement StatementItem in Model)
+    {
+        <tr>
+            <td>
+                "Insert Company Here"
+            </td>
+            <td>
+                @StatementItem.StatementCommonFields.StatementAccountNumber
+            </td>
+            <td>
+                @StatementItem.StatementCommonFields.StatementDate
+            </td>
+            <td>
+                @StatementItem.StatementSpecificFields.StatementFieldValue1
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details")
+            </td>
+        </tr>
+    }
+</table>

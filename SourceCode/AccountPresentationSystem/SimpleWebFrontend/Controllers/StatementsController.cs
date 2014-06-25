@@ -20,10 +20,8 @@ namespace SimpleWebFrontend.Controllers
         // GET: Statement
         public async Task<ActionResult> Index()
         {
-            List<AccountPresentationSystem.Domain.Model.StatementHandler.Statement> Model = new List<AccountPresentationSystem.Domain.Model.StatementHandler.Statement>();
-            Model = await StatementRepo.GetAllStatementsPerUser(new AccountPresentationSystem.Domain.Model.APSUser.APSUserId("1"));
-
-            return View();
+            List<AccountPresentationSystem.Domain.Model.StatementHandler.Statement> Model = await StatementRepo.GetAllStatementsPerUser(new AccountPresentationSystem.Domain.Model.APSUser.APSUserId("1"));
+            return View(Model);
         }
     }
 }

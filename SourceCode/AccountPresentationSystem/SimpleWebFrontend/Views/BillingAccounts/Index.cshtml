@@ -1,0 +1,31 @@
+﻿@model IEnumerable<AccountPresentationSystem.Domain.Model.Billing.BillingAccount>
+@{
+    ViewBag.Title = "My billing accounts";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>
+            Company
+        </th>
+        <th>&nbsp;</th>
+    </tr>
+
+    @foreach (AccountPresentationSystem.Domain.Model.Billing.BillingAccount BillingAccountItem in Model)
+    {
+        <tr>
+            <td>
+                @{
+        AccountPresentationSystem.Domain.Model.Billing.BillingCompany Comp = SimpleWebFrontend.App_Start.FakeData.BillingCompanies.Find(x => x.billingCompanyId.SameValueAs(BillingAccountItem.BillingCompanyId));
+        @Html.Raw(Comp.CompanyName);
+                }
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = BillingAccountItem.BillingAccountId.IdString }) | 
+                @Html.ActionLink("Delete", "Delete", new { id = BillingAccountItem.BillingAccountId.IdString })
+            </td>
+        </tr>
+    }
+</table>

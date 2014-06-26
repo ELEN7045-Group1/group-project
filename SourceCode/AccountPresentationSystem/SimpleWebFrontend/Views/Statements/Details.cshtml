@@ -11,7 +11,7 @@
         <th colspan="10">Insert Company Here</th>
     </tr>
     <tr>
-        <th>
+        <th style="width: 300px;">
             Account Number:
         </th>
         <td>
@@ -35,16 +35,23 @@
         </td>
     </tr>
 
-    <tr><td style="height:200px;">&nbsp;</td></tr>
+    <tr><td style="height:50px;">&nbsp;</td></tr>
     
-    <tr>
-        <th>
-            @Model.StatementSpecificFields.StatementFieldName1
-        </th>
-        <td>
-            @Model.StatementSpecificFields.StatementFieldValue1
-        </td>
-    </tr>
+    @foreach (AccountPresentationSystem.Domain.Model.StatementHandler.StatementSpecificFields fieldItem in Model.StatementSpecificFields)
+    { 
+        if ((fieldItem.StatementFieldName1.ToLower() == "total") || (fieldItem.StatementFieldName1.ToLower() == "subtotal"))
+        {
+            <tr><td style="height:50px">&nbsp;</td></tr>
+        }
+        <tr>
+            <th>
+                @fieldItem.StatementFieldName1
+            </th>
+            <td>
+                @fieldItem.StatementFieldValue1
+            </td>
+        </tr>
+    }
 </table>
 
 <br />

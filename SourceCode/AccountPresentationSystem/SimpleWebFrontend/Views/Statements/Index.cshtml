@@ -26,7 +26,10 @@
     {
         <tr>
             <td>
-                "Insert Company Here"
+                @{
+        AccountPresentationSystem.Domain.Model.Billing.BillingCompany Comp = SimpleWebFrontend.App_Start.FakeData.BillingCompanies.Find(x => x.billingCompanyId.SameValueAs(StatementItem.BillingAccount.BillingCompanyId));
+        Html.Raw(Comp.CompanyName);
+                }
             </td>
             <td>
                 @StatementItem.StatementCommonFields.StatementAccountNumber
@@ -35,7 +38,7 @@
                 @StatementItem.StatementCommonFields.StatementDate
             </td>
             <td>
-                @StatementItem.StatementSpecificFields.StatementFieldValue1
+                @StatementItem.StatementSpecificFields.Where(x => x.StatementFieldName1.ToLower() == "total").FirstOrDefault().StatementFieldValue1
             </td>
             <td>
                 @Html.ActionLink("Details", "Details", new { id = StatementItem.StatementId.StatementIdString })

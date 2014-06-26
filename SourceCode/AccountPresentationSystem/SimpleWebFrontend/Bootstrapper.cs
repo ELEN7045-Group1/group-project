@@ -2,6 +2,7 @@ using System.Web.Mvc;
 using Microsoft.Practices.Unity;
 using Unity.Mvc3;
 using SimpleWebFrontend.Repositories;
+using SimpleWebFrontend.App_Start;
 
 namespace SimpleWebFrontend
 {
@@ -20,7 +21,10 @@ namespace SimpleWebFrontend
 
             if (Properties.Settings.Default.UseFakeRepos)
             {
+                FakeData.InitFakeData();
                 container.RegisterType<IStatementRepository, FakeStatementRepository>();
+                container.RegisterType<IAccountRepository, FakeAccountRepository>();
+                container.RegisterType<IBillingAccountsRepository, FakeBillingAccountsRepository>();
             }
             else
             {

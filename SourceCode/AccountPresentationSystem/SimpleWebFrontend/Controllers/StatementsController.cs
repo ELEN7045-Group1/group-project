@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace SimpleWebFrontend.Controllers
 {
+    [Authorize]
     public class StatementsController : Controller
     {
         private readonly IStatementRepository StatementRepo;

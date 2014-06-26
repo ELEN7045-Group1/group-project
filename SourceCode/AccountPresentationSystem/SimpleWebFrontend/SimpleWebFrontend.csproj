@@ -128,23 +128,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FakeData.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BillingAccountsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StatementsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\BillingAccountViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Repositories\FakeAccountRepository.cs" />
+    <Compile Include="Repositories\FakeBillingAccountsRepository.cs" />
     <Compile Include="Repositories\FakeStatementRepository.cs" />
+    <Compile Include="Repositories\IAccountRepository.cs" />
+    <Compile Include="Repositories\IBillingAccountsRepository.cs" />
     <Compile Include="Repositories\IStatementRepository.cs" />
     <Compile Include="Repositories\StatementRepository.cs" />
   </ItemGroup>
@@ -173,7 +180,6 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Unity.Mvc3.README.txt" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -205,9 +211,10 @@
     <Content Include="Views\Account\ResetPassword.cshtml" />
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Statement\Index.cshtml" />
     <Content Include="Views\Statements\Index.cshtml" />
     <Content Include="Views\Statements\Details.cshtml" />
+    <Content Include="Views\BillingAccounts\Index.cshtml" />
+    <Content Include="Views\BillingAccounts\Link.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -28,8 +28,15 @@
                     @if (HttpContext.Current.User.Identity.IsAuthenticated)
                     {
                         <li>@Html.ActionLink("My Statements", "Index", "Statements")</li>
-                    }
-                </ul>
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Billing Accounts<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("My Linked Accounts", "Index", "BillingAccounts")</li>
+                                <li>@Html.ActionLink("Link New Account", "Link", "BillingAccounts")</li>
+                            </ul>
+                        </li> 
+                    }               
+                    </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>

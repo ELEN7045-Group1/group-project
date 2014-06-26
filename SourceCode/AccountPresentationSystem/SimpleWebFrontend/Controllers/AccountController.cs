@@ -9,14 +9,25 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Web.Security;
 using SimpleWebFrontend.Models;
+using AccountPresentationSystem.Domain.Model.APSUser;
+using SimpleWebFrontend.Repositories;
+using SimpleWebFrontend.App_Start;
 
-namespace RSMSWebPortal.Controllers
+namespace SimpleWebFrontend.Controllers
 {
+    [Authorize]
     public class AccountController : Controller
     {
+        private readonly IAccountRepository AccountsRepo;
+
+        public AccountController(IAccountRepository accountsRepo)
+        {
+            AccountsRepo = accountsRepo;
+        }
 
         //
         // GET: /Account/Login
+        [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
             ViewBag.ReturnUrl = returnUrl;
@@ -27,15 +38,18 @@ namespace RSMSWebPortal.Controllers
         // POST: /Account/Login
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [AllowAnonymous]
         public ActionResult Login(LoginViewModel model, string returnUrl)
         {
             if (ModelState.IsValid)
             {
                 try
                 {
-                    if (true == true)
+                    APSUser apsUser = AccountsRepo.GetUserAccountByUsernameAndPassword(model.Username, model.Password);
+                    if (apsUser != null)
                     {
                         FormsAuthentication.SetAuthCookie(model.Username, model.RememberMe);
+                        FakeData.UserID = apsUser.APSUserId.IdString;
 
                         if (this.Url.IsLocalUrl(returnUrl))
                             return Redirect(returnUrl);
@@ -66,6 +80,48 @@ namespace RSMSWebPortal.Controllers
         {
             FormsAuthentication.SignOut();
             return RedirectToAction("Index", "Home");
+        }
+
+        public ActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Register(RegisterViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                APSUser user = new APSUser(new APSUserId(Guid.NewGuid().ToString()), model.Username, model.Password);
+                AccountsRepo.InsertAPSUser(user);
+
+                FormsAuthentication.SetAuthCookie(user.APSUsername, false);
+                FakeData.UserID = user.APSUserId.IdString;
+                return RedirectToAction("Index", "Home");
+            }
+
+            return View();
+        }
+
+        public ActionResult Manage()
+        {
+            ViewBag.HasLocalPassword = true;
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Manage(ManageUserViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                APSUser user = AccountsRepo.GetUserAccountByUserID(FakeData.UserID);
+                AccountsRepo.UpdateAPSUser(user);
+                return RedirectToAction("Index", "Home");
+            }
+
+            return View();
         }
 
         #region Helpers

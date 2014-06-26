@@ -1,5 +1,6 @@
 ﻿namespace AccountPresentationSystem.Domain.Model.Billing
 {
+    using AccountPresentationSystem.Domain.Model.APSUser;
     using AccountPresentationSystem.Infrastructure;
     using System;
     using System.Collections.Generic;
@@ -34,7 +35,7 @@
             {
                 billingAccounts.Add(new BillingAccount((BillingAccountId)dr["billingAccountId"],
                     (BillingCompanyId)dr["billingCompanyId"], (string)dr["billingAccountUsername"],
-                    (string)dr["billingAccountPassword"]));
+                    (string)dr["billingAccountPassword"], new APSUser(new APSUserId("1"), "username1", "password1")));
             }
 
             return billingAccounts;

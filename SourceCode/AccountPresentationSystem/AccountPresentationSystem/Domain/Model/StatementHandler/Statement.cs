@@ -1,10 +1,11 @@
 ﻿namespace AccountPresentationSystem.Domain.Model.StatementHandler
 {
-    using AccountPresentationSystem.Domain.Shared;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Web;
+    using AccountPresentationSystem.Domain.Model.Billing;
+using AccountPresentationSystem.Domain.Shared;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 
     /// <summary>
     /// Refers the final statement for customer
@@ -16,7 +17,9 @@
         private readonly StatementId _statementId;
         private readonly StatementCommonFields _statementCommonFields;
         private readonly StatementType _statementType;
-        private readonly StatementSpecificFields _statementSpecificFields;
+        private readonly List<StatementSpecificFields> _statementSpecificFields;
+        private readonly APSUser.APSUser _apsuser;
+        private readonly BillingAccount _billingAccount;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="APSUser"/> class.
@@ -26,7 +29,7 @@
         /// <param name="StatementType">Identifies the what type for statements this is</param>
         /// <param name="SpecificFields">Specific Fields allocated to statement based on  statement type</param>
         /// <exception cref="System.ArgumentNullException"></exception>
-        public Statement(StatementId statementId, StatementCommonFields statementCommonFields, StatementType statementType, StatementSpecificFields statementSpecificFields)
+        public Statement(StatementId statementId, StatementCommonFields statementCommonFields, StatementType statementType, List<StatementSpecificFields> statementSpecificFields, APSUser.APSUser apsuser, BillingAccount billingAccount)
         {
             if (statementId != null && statementCommonFields != null && statementType != null && statementSpecificFields != null)
             {
@@ -34,6 +37,8 @@
                 this._statementCommonFields = statementCommonFields;
                 this._statementType = statementType;
                 this._statementSpecificFields = statementSpecificFields;
+                this._apsuser = apsuser;
+                this._billingAccount = billingAccount;
             }
             else
             {
@@ -73,9 +78,25 @@
         /// <summary>
         /// Gets the statement type 
         /// </summary>
-        public StatementSpecificFields StatementSpecificFields
+        public List<StatementSpecificFields> StatementSpecificFields
         {
             get { return _statementSpecificFields; }
+        }
+
+        /// <summary>
+        /// Gets the statement type 
+        /// </summary>
+        public APSUser.APSUser APSUser
+        {
+            get { return _apsuser; }
+        }
+
+        /// <summary>
+        /// Gets the statement type 
+        /// </summary>
+        public BillingAccount BillingAccount
+        {
+            get { return _billingAccount; }
         }
 
 

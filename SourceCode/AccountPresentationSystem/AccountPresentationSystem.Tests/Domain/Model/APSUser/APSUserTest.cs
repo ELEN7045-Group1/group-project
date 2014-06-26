@@ -54,7 +54,7 @@
             BillingAccountId localBillingAccountId = new BillingAccountId(localBillingAccountIdString);
             BillingCompanyId localBillingCompanyId = new BillingCompanyId(localBillingCompanyIdString);
             BillingAccount localBillingAccount = new BillingAccount(localBillingAccountId,
-               localBillingCompanyId, localBillingAccountUsername, localBillingAccountPassword);
+               localBillingCompanyId, localBillingAccountUsername, localBillingAccountPassword, localAPSUser);
 
             //Act
             localAPSUser.AddBillingAccount(localBillingAccount);

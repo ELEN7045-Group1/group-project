@@ -12,6 +12,7 @@ using System.Web;
         private readonly BillingCompanyId _billingCompanyId;
         private readonly string _billingAccountUsername;
         private readonly string _billingAccountPassword;
+        private readonly APSUser _apsUser;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingAccount"/> class.
@@ -22,7 +23,7 @@ using System.Web;
         /// <param name="billingAccountPassword">The billing account password.</param>
         /// <exception cref="System.ArgumentNullException"></exception>
         public BillingAccount(BillingAccountId billingAccountId, BillingCompanyId billingCompanyId, 
-            string billingAccountUsername, string billingAccountPassword)
+            string billingAccountUsername, string billingAccountPassword, APSUser apsUser)
         {
             if (billingAccountId != null && billingCompanyId !=null &&
                 !string.IsNullOrEmpty(billingAccountUsername) && !string.IsNullOrEmpty(billingAccountPassword))
@@ -31,6 +32,7 @@ using System.Web;
                 _billingCompanyId = billingCompanyId;
                 _billingAccountUsername = billingAccountUsername;
                 _billingAccountPassword = billingAccountPassword;
+                _apsUser = apsUser;
             }
             else
             {
@@ -80,6 +82,11 @@ using System.Web;
         public string BillingAccountPassword
         {
             get { return _billingAccountPassword; }
+        }
+
+        public APSUser APSUser
+        {
+            get { return _apsUser; }
         }
 
         /// <summary>

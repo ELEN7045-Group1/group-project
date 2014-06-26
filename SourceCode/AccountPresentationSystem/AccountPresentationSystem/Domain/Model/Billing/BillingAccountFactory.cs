@@ -18,7 +18,7 @@
 
             BillingCompanyId localBillingCompanyId = new BillingCompanyId(billingCompanyIdString);
 
-            return new BillingAccount(localBillingAccountId, localBillingCompanyId, billingAccountUsername, billingAccountPassword);
+            return new BillingAccount(localBillingAccountId, localBillingCompanyId, billingAccountUsername, billingAccountPassword, new APSUser.APSUser(new APSUser.APSUserId("1"), "testUsername", "testPassword"));
         }
 
     }

@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using AccountPresentationSystem.Domain.Model.StatementHandler;
+using AccountPresentationSystem.Domain.Model.APSUser;
+using AccountPresentationSystem.Domain.Model.Billing;
 
 namespace AccountPresentationSystem.Tests.Domain.StatementHandler
 {
@@ -14,7 +16,7 @@ namespace AccountPresentationSystem.Tests.Domain.StatementHandler
         public void CreateStatement_ExpectionThrown()
         {
             //Arrange -> Act -> Assert
-           Assert.Throws(typeof(ArgumentNullException), ()=> new Statement(null,null,null,null));
+           Assert.Throws(typeof(ArgumentNullException), ()=> new Statement(null,null,null,null, null, null));
         }
 
         [Test]
@@ -36,9 +38,14 @@ namespace AccountPresentationSystem.Tests.Domain.StatementHandler
             string localstatementfieldname1 = "Instalment notice";
             string localstatementfieldvalue1 = "You will need to pay by the 25th on the month";
             StatementSpecificFields localStatementSpecificFields = new StatementSpecificFields(localstatementfieldname1, localstatementfieldvalue1);
+            List<StatementSpecificFields> specificFieldsList = new List<StatementSpecificFields>();
+            specificFieldsList.Add(localStatementSpecificFields);
+            
+            APSUser localAPSUser = new APSUser(new APSUserId("1"), "testusername", "testpassword");
+            BillingAccount localBillingAccount = new BillingAccount(new BillingAccountId("1"), new BillingCompanyId("1"), "testusername", "testpassword", localAPSUser);
 
             //Act
-            Statement localStatement = new Statement(localStatementId, localStatementCommonFields, localStatementType, localStatementSpecificFields);
+            Statement localStatement = new Statement(localStatementId, localStatementCommonFields, localStatementType, specificFieldsList, localAPSUser, localBillingAccount);
 
             //Assert
             Assert.AreEqual(localStatement.StatementId, localStatementId);

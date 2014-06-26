@@ -29,7 +29,6 @@ namespace AccountPresentationSystem.App_Start
             IDBConnection databaseConnection = new DBConnection();
 
             container.RegisterInstance<IDBConnection>(databaseConnection);
-            //container.RegisterType<IDBConnection, DBConnection>();
             container.RegisterType<IScheduleRepository, ScheduleRepository>();
 
             config.DependencyResolver = new UnityResolver(container);

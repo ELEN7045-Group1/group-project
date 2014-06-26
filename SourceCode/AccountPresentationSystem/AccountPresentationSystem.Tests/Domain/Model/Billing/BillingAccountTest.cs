@@ -16,7 +16,7 @@
         public void Create_BillingAccount_ExceptionThrown()
         {
             //Arrange -> Act -> Assert
-            Assert.Throws(typeof(ArgumentNullException), () => new BillingAccount(null, null,null,null));
+            Assert.Throws(typeof(ArgumentNullException), () => new BillingAccount(null, null, null, null, null));
         }
 
         [Test]
@@ -29,10 +29,11 @@
             string localBillingAccountPassword = "Billy123";
             BillingAccountId localBillingAccountId = new BillingAccountId(localBillingAccountIdString);
             BillingCompanyId localBillingCompanyId = new BillingCompanyId(localBillingCompanyIdString);
+            APSUser localAPSUser = new APSUser(new APSUserId("1"), "testuser", "testPasssword");
 
             //Act
             BillingAccount localBillingAccount = new BillingAccount(localBillingAccountId,
-                localBillingCompanyId, localBillingAccountUsername, localBillingAccountPassword);
+                localBillingCompanyId, localBillingAccountUsername, localBillingAccountPassword, localAPSUser);
             
             //Assert
             Assert.AreEqual(localBillingAccount.BillingAccountId, localBillingAccountId);

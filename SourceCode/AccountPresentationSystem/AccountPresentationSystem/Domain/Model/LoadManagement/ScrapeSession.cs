@@ -15,7 +15,7 @@ namespace AccountPresentationSystem.Domain.Model.LoadManagement
             {
                 // Get scraping scripts per billing company
                 BillingCompany getScrapingScripts = new BillingCompany(new BillingCompanyId(billingCompanyInfo.BillingCompanyId), billingCompanyInfo.BillingCompanyName);
-                List<ScrapingScript> scrapingScripts = getScrapingScripts.getScrapingScripts();
+                List<ScrapingScript> scrapingScripts = getScrapingScripts.GetScrapingScripts();
 
                 //foreach (var scrapingScript in scrapingScripts)
                 //{

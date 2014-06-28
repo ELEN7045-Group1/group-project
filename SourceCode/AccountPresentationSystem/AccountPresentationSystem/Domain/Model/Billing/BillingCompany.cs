@@ -67,8 +67,9 @@
             return billingCompanyId.SameValueAs(other.billingCompanyId);
         }
 
-        public List<ScrapingScript> getScrapingScripts()
+        public List<ScrapingScript> GetScrapingScripts()
         {
+            // Call LoadScrapingScript and return the script for the specific company
             return new List<ScrapingScript>();
         }
     }

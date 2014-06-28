@@ -127,6 +127,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Application\Controllers\LoadManageerController.cs" />
     <Compile Include="Application\Controllers\ScheduleController.cs" />
     <Compile Include="Application\Controllers\StatementsController.cs" />
     <Compile Include="Application\Controllers\UserController.cs" />
@@ -153,13 +154,20 @@
     <Compile Include="Domain\Model\ErrorHandling\InvalidCredentials.cs" />
     <Compile Include="Domain\Model\ErrorHandling\NotAneBillingCustomer.cs" />
     <Compile Include="Domain\Model\ErrorHandling\UnableToCheckDataIntegrity.cs" />
+    <Compile Include="Domain\Model\LoadManagement\ILoadManagerRuleRepository.cs" />
     <Compile Include="Domain\Model\LoadManagement\IScrapeDataRepository.cs" />
+    <Compile Include="Domain\Model\LoadManagement\LoadManager.cs" />
+    <Compile Include="Domain\Model\LoadManagement\LoadManagerRules.cs" />
+    <Compile Include="Domain\Model\LoadManagement\LoadManagerRule.cs" />
     <Compile Include="Domain\Model\LoadManagement\ScrapeData.cs" />
+    <Compile Include="Domain\Model\LoadManagement\LoadManagerRuleRepository.cs" />
     <Compile Include="Domain\Model\LoadManagement\ScrapeDataRepository.cs" />
     <Compile Include="Domain\Model\APSUser\APSUser.cs" />
     <Compile Include="Domain\Model\APSUser\APSUserId.cs" />
     <Compile Include="Domain\Model\Billing\BillingCompanyRepository.cs" />
     <Compile Include="Domain\Model\Billing\IBillingCompanyRepository.cs" />
+    <Compile Include="Domain\Model\LoadManagement\LoadManagerErrors.cs" />
+    <Compile Include="Domain\Model\LoadManagement\ScrapeSession.cs" />
     <Compile Include="Domain\Model\Scheduling\IScheduleRepository.cs" />
     <Compile Include="Domain\Model\Scheduling\RetryAfterUnsuccessfulScrapeRule.cs" />
     <Compile Include="Domain\Model\Scheduling\Schedule.cs" />
@@ -192,6 +200,7 @@
     <Compile Include="Infrastructure\MessageObjectWrapper.cs" />
     <Compile Include="Infrastructure\ReferenceGenerator.cs" />
     <Compile Include="Infrastructure\ScrapeSessionQue.cs" />
+    <Compile Include="Interface\ScraperProvider.cs" />
     <Compile Include="Messages\Request_Messages\LoggingRequest.cs" />
     <Compile Include="Messages\Request_Messages\ScrapeSession.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -207,7 +216,6 @@
     <Compile Include="Domain\Shared\OrSpecification.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Interface\" />
     <Folder Include="Messages\Response_Messages\" />
     <Folder Include="Presentation\" />
   </ItemGroup>

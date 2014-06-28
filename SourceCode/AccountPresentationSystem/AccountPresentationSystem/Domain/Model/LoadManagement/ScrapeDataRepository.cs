@@ -12,13 +12,14 @@ namespace AccountPresentationSystem.Domain.Model.LoadManagement
     {
         IDBConnection dataConnection;
 
-         public ScrapeDataRepository()
+        public ScrapeDataRepository()
         {
             //this.dataConnection = DBConnection;
         }
 
-        public bool SaveScrapeData(List<ScrapeData> scrapedData)
+        public List<LoadManagerErrors> SaveScrapeData(List<ScrapeData> scrapedData)
         {
+            List<LoadManagerErrors> loadManagerErrors = new List<LoadManagerErrors>();
             Logging log = new Logging();
             int rowsSavedCount = 0;
 
@@ -32,14 +33,16 @@ namespace AccountPresentationSystem.Domain.Model.LoadManagement
 
                 log.LogMessage(Enumeration.LoggingPriority.Low, "123", rowsSavedCount.ToString() + " scraped data rows stored in DB");
 
-                return true;
+                loadManagerErrors.Add(new LoadManagerErrors { ErrorCode = 00, ErrorDescription = "Scraped Data Saved", Message = rowsSavedCount.ToString() + " records saved" });
             }
             catch (Exception ex)
             {
                 log.LogMessage(Enumeration.LoggingPriority.High, "123", ex);
 
-                return false;
+                loadManagerErrors.Add(new LoadManagerErrors { ErrorCode = 91, ErrorDescription = "Error Occured", Message = ex.InnerException.Message });
             }
+
+            return loadManagerErrors;
         }
     }
 }

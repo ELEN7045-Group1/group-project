@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 namespace AccountPresentationSystem.Domain.Model.LoadManagement
 {
-    interface IScrapeDataRepository
+    interface ILoadManagerRuleRepository
     {
-        List<LoadManagerErrors> SaveScrapeData(List<ScrapeData> scrapedData);
+        List<LoadManagerRule> LoadRules();
     }
 }

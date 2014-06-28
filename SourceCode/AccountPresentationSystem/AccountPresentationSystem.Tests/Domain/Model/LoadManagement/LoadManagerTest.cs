@@ -12,16 +12,9 @@ namespace AccountPresentationSystem.Tests.Domain.Model.LoadManagement
     public class LoadManagerTest
     {
         [Test]
-        public void CreateLoadManagerTest()
+        public void StartManagerTest()
         {
-            ScrapeDataRepository MyService = new ScrapeDataRepository();
 
-            bool retVal = MyService.SaveScrapeData(new List<ScrapeData>
-            {
-                
-            });
-
-            Assert.IsTrue(retVal);
         }
     }
 }

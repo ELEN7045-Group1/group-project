@@ -66,5 +66,10 @@
         {
             return billingCompanyId.SameValueAs(other.billingCompanyId);
         }
+
+        public List<ScrapingScript> getScrapingScripts()
+        {
+            return new List<ScrapingScript>();
+        }
     }
 }

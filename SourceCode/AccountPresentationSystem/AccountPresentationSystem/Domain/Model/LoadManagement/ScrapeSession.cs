@@ -9,13 +9,13 @@ namespace AccountPresentationSystem.Domain.Model.LoadManagement
 {
     public class ScrapeSession
     {
-        public void CreateScrapeSession(List<LoadManagerRule> rules)
+        public void CreateScrapeSession(List<LoadManagerRule> rules, BillingCompanyInfo billingCompanyInfo)
         {
             try
             {
                 // Get scraping scripts per billing company
-                //BillingCompany getScrapingScripts = new BillingCompany();
-                //List<ScrapingScript> scrapingScripts = getScrapingScripts();
+                BillingCompany getScrapingScripts = new BillingCompany(new BillingCompanyId(billingCompanyInfo.BillingCompanyId), billingCompanyInfo.BillingCompanyName);
+                List<ScrapingScript> scrapingScripts = getScrapingScripts.getScrapingScripts();
 
                 //foreach (var scrapingScript in scrapingScripts)
                 //{

@@ -7,7 +7,7 @@ namespace AccountPresentationSystem.Domain.Model.LoadManagement
 {
     public class LoadManager
     {
-        public void Start()
+        public void Start(BillingCompanyInfo billingCompanyInfo)
         {
             // Load all the reules for the LoadManager
             LoadManagerRules loadManagerRules = new LoadManagerRules();
@@ -15,7 +15,7 @@ namespace AccountPresentationSystem.Domain.Model.LoadManagement
 
             // Call the scrape session to initialise the scrape
             ScrapeSession scrapeSession = new ScrapeSession();
-            scrapeSession.CreateScrapeSession(rules);
+            scrapeSession.CreateScrapeSession(rules, billingCompanyInfo);
         }
     }
 }

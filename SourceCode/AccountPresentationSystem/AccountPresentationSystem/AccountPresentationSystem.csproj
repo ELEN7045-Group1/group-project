@@ -154,6 +154,7 @@
     <Compile Include="Domain\Model\ErrorHandling\InvalidCredentials.cs" />
     <Compile Include="Domain\Model\ErrorHandling\NotAneBillingCustomer.cs" />
     <Compile Include="Domain\Model\ErrorHandling\UnableToCheckDataIntegrity.cs" />
+    <Compile Include="Domain\Model\LoadManagement\BillingCompanyInfo.cs" />
     <Compile Include="Domain\Model\LoadManagement\ILoadManagerRuleRepository.cs" />
     <Compile Include="Domain\Model\LoadManagement\IScrapeDataRepository.cs" />
     <Compile Include="Domain\Model\LoadManagement\LoadManager.cs" />
@@ -168,6 +169,7 @@
     <Compile Include="Domain\Model\Billing\IBillingCompanyRepository.cs" />
     <Compile Include="Domain\Model\LoadManagement\LoadManagerErrors.cs" />
     <Compile Include="Domain\Model\LoadManagement\ScrapeSession.cs" />
+    <Compile Include="Domain\Model\Billing\ScrapingScript.cs" />
     <Compile Include="Domain\Model\Scheduling\IScheduleRepository.cs" />
     <Compile Include="Domain\Model\Scheduling\RetryAfterUnsuccessfulScrapeRule.cs" />
     <Compile Include="Domain\Model\Scheduling\Schedule.cs" />

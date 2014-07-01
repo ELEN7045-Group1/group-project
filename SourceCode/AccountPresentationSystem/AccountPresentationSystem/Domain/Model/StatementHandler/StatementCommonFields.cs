@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AccountPresentationSystem.Domain.Shared;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,12 +10,12 @@ namespace AccountPresentationSystem.Domain.Model.StatementHandler
     /// Refers to common fields 
     /// for purposes of demostration am only showing a few fields 
     /// </summary>
-    public class StatementCommonFields
+    public class StatementCommonFields : IValueObject<StatementCommonFields>
     {
         private readonly int _statementAccountnumber;
         private readonly string _statementAccountholdername;
         private readonly DateTime _statementDate;
-        // Would a be a lot more field than this
+        // Would a be a lot more field than this just showing it would be like
 
 
         public StatementCommonFields(int statementAccountnumber, string statementAccountholdername, DateTime statementDate)

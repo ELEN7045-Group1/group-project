@@ -1,6 +1,7 @@
 ﻿namespace AccountPresentationSystem.Domain.Model.StatementHandler
 {
-    using AccountPresentationSystem.Domain.Model.Billing;
+using AccountPresentationSystem.Domain.Model.APSUser;
+using AccountPresentationSystem.Domain.Model.Billing;
 using AccountPresentationSystem.Domain.Shared;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ using System.Web;
         private readonly StatementCommonFields _statementCommonFields;
         private readonly StatementType _statementType;
         private readonly List<StatementSpecificFields> _statementSpecificFields;
-        private readonly APSUser.APSUser _apsuser;
+        private readonly APSUser _apsuser;
         private readonly BillingAccount _billingAccount;
 
         /// <summary>
@@ -29,9 +30,9 @@ using System.Web;
         /// <param name="StatementType">Identifies the what type for statements this is</param>
         /// <param name="SpecificFields">Specific Fields allocated to statement based on  statement type</param>
         /// <exception cref="System.ArgumentNullException"></exception>
-        public Statement(StatementId statementId, StatementCommonFields statementCommonFields, StatementType statementType, List<StatementSpecificFields> statementSpecificFields, APSUser.APSUser apsuser, BillingAccount billingAccount)
+        public Statement(StatementId statementId, StatementCommonFields statementCommonFields, StatementType statementType, List<StatementSpecificFields> statementSpecificFields, APSUser apsuser, BillingAccount billingAccount)
         {
-            if (statementId != null && statementCommonFields != null && statementType != null && statementSpecificFields != null)
+            if (statementId != null && statementCommonFields != null && statementType != null && statementSpecificFields != null && apsuser != null && billingAccount != null)
             {
                 this._statementId = statementId;
                 this._statementCommonFields = statementCommonFields;
@@ -76,7 +77,7 @@ using System.Web;
         }
 
         /// <summary>
-        /// Gets the statement type 
+        /// Gets the statement specific fields
         /// </summary>
         public List<StatementSpecificFields> StatementSpecificFields
         {
@@ -84,9 +85,9 @@ using System.Web;
         }
 
         /// <summary>
-        /// Gets the statement type 
+        /// Gets the Aps User 
         /// </summary>
-        public APSUser.APSUser APSUser
+        public APSUser APSUser
         {
             get { return _apsuser; }
         }

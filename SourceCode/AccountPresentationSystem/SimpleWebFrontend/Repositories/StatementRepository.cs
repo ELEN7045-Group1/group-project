@@ -12,7 +12,7 @@ namespace SimpleWebFrontend.Repositories
 {
     public class StatementRepository : IStatementRepository
     {
-        public async Task<List<Statement>> GetAllStatementsPerUser(APSUserId UserID)
+        public async Task<List<Statement>> GetAllStatementsPerUser(string UserID)
         {
             List<Statement> retList = new List<Statement>();
 
@@ -32,7 +32,7 @@ namespace SimpleWebFrontend.Repositories
             return retList;
         }
 
-        public async Task<Statement> GetSpecificStatement(StatementId StatementId)
+        public async Task<Statement> GetSpecificStatement(string StatementId)
         {
 
             using (var client = new HttpClient())
@@ -42,7 +42,7 @@ namespace SimpleWebFrontend.Repositories
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 // New code:
-                HttpResponseMessage response = await client.GetAsync("api/statements/" + StatementId.StatementIdString);
+                HttpResponseMessage response = await client.GetAsync("api/statements/" + StatementId);
                 if (response.IsSuccessStatusCode)
                 {
                     return await response.Content.ReadAsAsync<Statement>();

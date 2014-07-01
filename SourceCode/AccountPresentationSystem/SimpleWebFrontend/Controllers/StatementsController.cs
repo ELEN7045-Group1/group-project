@@ -1,4 +1,5 @@
-﻿using SimpleWebFrontend.Repositories;
+﻿using SimpleWebFrontend.App_Start;
+using SimpleWebFrontend.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,14 +22,14 @@ namespace SimpleWebFrontend.Controllers
         // GET: Statement
         public async Task<ActionResult> Index()
         {
-            List<AccountPresentationSystem.Domain.Model.StatementHandler.Statement> Model = await StatementRepo.GetAllStatementsPerUser(new AccountPresentationSystem.Domain.Model.APSUser.APSUserId("1"));
+            List<AccountPresentationSystem.Domain.Model.StatementHandler.Statement> Model = await StatementRepo.GetAllStatementsPerUser(FakeData.UserID);
             return View(Model);
         }
 
         // GET: Statement
         public async Task<ActionResult> Details(string Id)
         {
-            AccountPresentationSystem.Domain.Model.StatementHandler.Statement Model = await StatementRepo.GetSpecificStatement(new AccountPresentationSystem.Domain.Model.StatementHandler.StatementId(Id));
+            AccountPresentationSystem.Domain.Model.StatementHandler.Statement Model = await StatementRepo.GetSpecificStatement(Id);
             return View(Model);
         }
     }

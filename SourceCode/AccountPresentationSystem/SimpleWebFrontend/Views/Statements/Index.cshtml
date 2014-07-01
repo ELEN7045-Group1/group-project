@@ -28,7 +28,7 @@
             <td>
                 @{
         AccountPresentationSystem.Domain.Model.Billing.BillingCompany Comp = SimpleWebFrontend.App_Start.FakeData.BillingCompanies.Find(x => x.billingCompanyId.SameValueAs(StatementItem.BillingAccount.BillingCompanyId));
-        Html.Raw(Comp.CompanyName);
+        @Html.Raw(Comp.CompanyName);
                 }
             </td>
             <td>

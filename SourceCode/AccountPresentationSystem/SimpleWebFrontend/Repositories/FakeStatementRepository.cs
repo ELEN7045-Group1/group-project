@@ -11,14 +11,14 @@ namespace SimpleWebFrontend.Repositories
 {
     public class FakeStatementRepository : IStatementRepository
     {
-        public async Task<List<Statement>> GetAllStatementsPerUser(APSUserId UserID)
+        public async Task<List<Statement>> GetAllStatementsPerUser(string UserID)
         {
-            return FakeData.Statements.Where(x => x.APSUser.APSUserId.SameValueAs(UserID)).ToList();
+            return FakeData.Statements.Where(x => x.APSUser.APSUserId.IdString == UserID).ToList();
         }
 
-        public async Task<Statement> GetSpecificStatement(StatementId StatementId)
+        public async Task<Statement> GetSpecificStatement(string StatementId)
         {
-            return FakeData.Statements.Where(x => x.StatementId.StatementIdString == StatementId.StatementIdString).FirstOrDefault();
+            return FakeData.Statements.Where(x => x.StatementId.StatementIdString == StatementId).FirstOrDefault();
         }
 
     }

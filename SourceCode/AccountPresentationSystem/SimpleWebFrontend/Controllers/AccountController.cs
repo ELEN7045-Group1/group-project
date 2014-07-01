@@ -82,6 +82,7 @@ namespace SimpleWebFrontend.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        [AllowAnonymous]
         public ActionResult Register()
         {
             return View();
@@ -89,6 +90,7 @@ namespace SimpleWebFrontend.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [AllowAnonymous]
         public ActionResult Register(RegisterViewModel model)
         {
             if (ModelState.IsValid)

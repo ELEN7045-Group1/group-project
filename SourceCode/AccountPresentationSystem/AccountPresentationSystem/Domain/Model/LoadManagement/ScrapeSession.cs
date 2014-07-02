@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using AccountPresentationSystem.Domain.Model.Billing;
+using AccountPresentationSystem.Domain.Shared;
 using AccountPresentationSystem.Interface;
 
 namespace AccountPresentationSystem.Domain.Model.LoadManagement
 {
-    public class ScrapeSession
+    public class ScrapeSession : IEntity<ScrapeSession>
     {
+        private readonly ScrapeSession _scrapeSession;
+
         public void CreateScrapeSession(List<LoadManagerRule> rules, BillingCompanyInfo billingCompanyInfo)
         {
             try
@@ -48,6 +51,21 @@ namespace AccountPresentationSystem.Domain.Model.LoadManagement
             {
                 // Process errors
             }    
+        }
+
+        public bool SameValueAs(ScrapeSession other)
+        {
+            return true;
+        }
+
+        public ScrapeSession scrapeSession
+        {
+            get { return _scrapeSession; }
+        }
+
+        public virtual bool SameIdentityAs(ScrapeSession other)
+        {
+            return scrapeSession.SameValueAs(other.scrapeSession);
         }
     }
 }

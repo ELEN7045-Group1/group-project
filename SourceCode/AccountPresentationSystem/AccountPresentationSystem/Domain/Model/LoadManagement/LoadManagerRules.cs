@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using AccountPresentationSystem.Domain.Shared;
 
 namespace AccountPresentationSystem.Domain.Model.LoadManagement
 {
-    public class LoadManagerRules
+    public class LoadManagerRules : IValueObject<LoadManagerRules>
     {
         public List<LoadManagerRule> LoadRules()
         {
@@ -21,6 +22,11 @@ namespace AccountPresentationSystem.Domain.Model.LoadManagement
             }
 
             return loadManagerRules;
+        }
+
+        public bool SameValueAs(LoadManagerRules other)
+        {
+            return true;
         }
     }
 }

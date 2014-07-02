@@ -6,7 +6,6 @@
     using System.Linq;
     using System.Web;
 
-
     public class DataIntegrityRule :IValueObject<DataIntegrityRule>
     {
         /// <summary>

@@ -19,7 +19,7 @@
         /// 
         public DataIntegrityRule()
         {
-
+            CheckResult = true;
         }
 
         private bool checkResult;

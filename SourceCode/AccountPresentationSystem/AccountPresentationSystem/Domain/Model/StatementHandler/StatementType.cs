@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AccountPresentationSystem.Domain.Shared;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,7 +9,7 @@ namespace AccountPresentationSystem.Domain.Model.StatementHandler
     /// <summary>
     /// Refers the statement type of the statement E.g 1 = Municpalities 2 = Credit Cards Providers 3 = Telco Service Providers
     /// </summary>
-    public class StatementType
+    public class StatementType : IValueObject<StatementType>
     {
         /// <summary>
         /// The identifier
@@ -48,10 +49,11 @@ namespace AccountPresentationSystem.Domain.Model.StatementHandler
             get { return _statementtypename; }
         }
 
-        
-        public virtual bool SameIdentityAs(StatementType other)
+      
+
+        public bool SameValueAs(StatementType other)
         {
-            return StatementTypeNo.Equals(other._statementtypeno);
+            return StatementTypeNo.Equals(other.StatementTypeNo);
         }
 
     }

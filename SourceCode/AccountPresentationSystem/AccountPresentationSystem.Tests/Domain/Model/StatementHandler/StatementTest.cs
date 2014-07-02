@@ -51,7 +51,10 @@ namespace AccountPresentationSystem.Tests.Domain.StatementHandler
             Assert.AreEqual(localStatement.StatementId, localStatementId);
             Assert.AreEqual(localStatement.StatementCommonFields, localStatementCommonFields);
             Assert.AreEqual(localStatement.StatementType, localStatementType);
-            Assert.AreEqual(localStatement.StatementSpecificFields, localStatementSpecificFields);
+            Assert.AreEqual(localStatement.StatementSpecificFields, specificFieldsList);
+            Assert.AreEqual(localStatement.APSUser, localAPSUser);
+            Assert.AreEqual(localStatement.BillingAccount, localBillingAccount);
+    
         }
     }
 }

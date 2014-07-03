@@ -9,20 +9,19 @@ namespace AccountPresentationSystem.Domain.Model.Scheduling
 {
     public class Schedule : IValueObject<Schedule>
     {
-        private DateTime StartTime;
-        private BillingAccountId BillingAccount;
+        private readonly ITaskRepository taskRepo;
+        private readonly IBillingCompanyRepository billingCompanyRepo;
 
-        private List<WindowPeriodRule> WindowPeriods;
-        private StatementLifeCycleRule StatementLifecycle;
-        private List<RetryAfterUnsuccessfulScrapeRule> RetryRules;
-
-        public Schedule(List<WindowPeriodRule> windowPeriods, StatementLifeCycleRule statementLifeCycle, List<RetryAfterUnsuccessfulScrapeRule> retryRules, DateTime startTime, BillingAccountId billingAccount)
+        public Schedule(ITaskRepository _taskRepo, IBillingCompanyRepository _billingCompanyRepo)
         {
-            WindowPeriods = windowPeriods;
-            StatementLifecycle = statementLifeCycle;
-            RetryRules = retryRules;
-            StartTime = startTime;
-            BillingAccount = billingAccount;
+            taskRepo = _taskRepo;
+            billingCompanyRepo = _billingCompanyRepo;
+        }
+
+        public int CreateNewTasks()
+        {
+
+            return 0;
         }
 
         public bool SameValueAs(Schedule other)

@@ -172,11 +172,14 @@
     <Compile Include="Domain\Model\LoadManagement\ScrapeSession.cs" />
     <Compile Include="Domain\Model\Billing\ScrapingScript.cs" />
     <Compile Include="Domain\Model\Scheduling\IScheduleRepository.cs" />
+    <Compile Include="Domain\Model\Scheduling\ITaskRepository.cs" />
     <Compile Include="Domain\Model\Scheduling\RetryAfterUnsuccessfulScrapeRule.cs" />
     <Compile Include="Domain\Model\Scheduling\Schedule.cs" />
     <Compile Include="Domain\Model\Scheduling\ScheduleRepository.cs" />
     <Compile Include="Domain\Model\Scheduling\StatementLifeCycleRule.cs" />
     <Compile Include="Domain\Model\Scheduling\RetryAfterUnsuccessfulScrapeRuleRepository.cs" />
+    <Compile Include="Domain\Model\Scheduling\ScrapeTask.cs" />
+    <Compile Include="Domain\Model\Scheduling\TaskRepository.cs" />
     <Compile Include="Domain\Model\Scheduling\TimeOfDay.cs" />
     <Compile Include="Domain\Model\Scheduling\WindowPeriodRule.cs" />
     <Compile Include="Domain\Model\Scheduling\WindowPeriodRuleRepository.cs" />
@@ -190,7 +193,6 @@
     <Compile Include="Domain\Service\BillingAccountService.cs" />
     <Compile Include="Domain\Service\IBillingAccountService.cs" />
     <Compile Include="Domain\Service\LoadManagerService.cs" />
-    <Compile Include="Domain\Service\SchedulerCreatorService.cs" />
     <Compile Include="Domain\Service\StatementFormatterService.cs" />
     <Compile Include="Domain\Service\StatementGenerator.cs" />
     <Compile Include="Global.asax.cs">

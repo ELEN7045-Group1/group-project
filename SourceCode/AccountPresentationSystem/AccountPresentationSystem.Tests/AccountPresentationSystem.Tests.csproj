@@ -123,14 +123,14 @@
     <Compile Include="Domain\Model\LoadManagement\LoadManagerTest.cs" />
     <Compile Include="Domain\Model\LoadManagement\ScrapeDataRepoTest.cs" />
     <Compile Include="Domain\Model\LoadManagement\ScrapeSessionTest.cs" />
-    <Compile Include="Domain\Model\Schedule\TimeOfDayTest.cs" />
+    <Compile Include="Domain\Model\Scheduling\TimeOfDayTest.cs" />
     <Compile Include="Domain\Model\StatementHandler\StatementCommonFieldsTest.cs" />
     <Compile Include="Domain\Model\StatementHandler\StatementIdTest.cs" />
     <Compile Include="Domain\Model\StatementHandler\StatementSpecificFieldsTest.cs" />
     <Compile Include="Domain\Model\StatementHandler\StatementTest.cs" />
     <Compile Include="Domain\Model\StatementHandler\StatementTypeTest.cs" />
     <Compile Include="Domain\Service\LoadManagerServiceTest.cs" />
-    <Compile Include="Domain\Service\SchedulerServiceTest.cs" />
+    <Compile Include="Domain\Model\Scheduling\SchedulerTest.cs" />
     <Compile Include="Intrastructure\LoggingTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

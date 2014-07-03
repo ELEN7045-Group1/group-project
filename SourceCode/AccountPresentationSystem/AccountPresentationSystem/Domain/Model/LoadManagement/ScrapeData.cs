@@ -13,5 +13,7 @@ namespace AccountPresentationSystem.Domain.Model.LoadManagement
          public string AccountUsername { get; set; }
          public string AccountPassword { get; set; }
          public List<string> Rules { get; set; }
+         public int ErrorCode { get; set; }
+         public string ErrorDescription { get; set; }
     }
 }

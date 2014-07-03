@@ -193,11 +193,11 @@
     <Compile Include="Domain\Model\StatementHandler\StatementSpecificFields.cs" />
     <Compile Include="Domain\Model\StatementHandler\StatementTelcoSpecificFields.cs" />
     <Compile Include="Domain\Model\StatementHandler\StatementType.cs" />
-    <Compile Include="Domain\Service\BillingAccountService.cs" />
-    <Compile Include="Domain\Service\IBillingAccountService.cs" />
-    <Compile Include="Domain\Service\LoadManagerService.cs" />
-    <Compile Include="Domain\Service\StatementNumberFormatterService.cs" />
-    <Compile Include="Domain\Service\StatementGenerator.cs" />
+    <Compile Include="Domain\Model\StatementHandler\Service\BillingAccountService.cs" />
+    <Compile Include="Domain\Model\StatementHandler\Service\IBillingAccountService.cs" />
+    <Compile Include="Domain\Model\StatementHandler\Service\LoadManagerService.cs" />
+    <Compile Include="Domain\Model\StatementHandler\Service\StatementNumberFormatterService.cs" />
+    <Compile Include="Domain\Model\StatementHandler\Service\StatementGenerator.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -212,16 +212,16 @@
     <Compile Include="Messages\Request_Messages\LoggingRequest.cs" />
     <Compile Include="Messages\Request_Messages\ScrapeSession.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Domain\Shared\AbstractSpecification.cs" />
-    <Compile Include="Domain\Shared\AndSpecification.cs" />
-    <Compile Include="Domain\Shared\DomainObjectUtils.cs" />
-    <Compile Include="Domain\Shared\Enumeration.cs" />
-    <Compile Include="Domain\Shared\IDomainEvent.cs" />
-    <Compile Include="Domain\Shared\IEntity.cs" />
-    <Compile Include="Domain\Shared\ISpecification.cs" />
-    <Compile Include="Domain\Shared\IValueObject.cs" />
-    <Compile Include="Domain\Shared\NotSpecification.cs" />
-    <Compile Include="Domain\Shared\OrSpecification.cs" />
+    <Compile Include="Domain\Model\Shared\AbstractSpecification.cs" />
+    <Compile Include="Domain\Model\Shared\AndSpecification.cs" />
+    <Compile Include="Domain\Model\Shared\DomainObjectUtils.cs" />
+    <Compile Include="Domain\Model\Shared\Enumeration.cs" />
+    <Compile Include="Domain\Model\Shared\IDomainEvent.cs" />
+    <Compile Include="Domain\Model\Shared\IEntity.cs" />
+    <Compile Include="Domain\Model\Shared\ISpecification.cs" />
+    <Compile Include="Domain\Model\Shared\IValueObject.cs" />
+    <Compile Include="Domain\Model\Shared\NotSpecification.cs" />
+    <Compile Include="Domain\Model\Shared\OrSpecification.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Messages\Response_Messages\" />

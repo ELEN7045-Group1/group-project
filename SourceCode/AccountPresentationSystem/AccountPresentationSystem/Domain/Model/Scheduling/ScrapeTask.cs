@@ -10,6 +10,7 @@ namespace AccountPresentationSystem.Domain.Model.Scheduling
     public class ScrapeTask
     {
         private readonly string billingAccountID;
+        private readonly string taskID;
         private readonly ScrapeTaskStatus taskStatus;
         private readonly DateTime scrapeStart;
         private readonly List<WindowPeriodRule> windowPeriodrules;
@@ -32,8 +33,9 @@ namespace AccountPresentationSystem.Domain.Model.Scheduling
             }
         }
 
-        public ScrapeTask(string _billingAccountID, List<WindowPeriodRule> _windowPeriodrules, List<RetryAfterUnsuccessfulScrapeRule> _retryRules, StatementLifeCycleRule _lifeCycleRule)
+        public ScrapeTask(string _taskID, string _billingAccountID, List<WindowPeriodRule> _windowPeriodrules, List<RetryAfterUnsuccessfulScrapeRule> _retryRules, StatementLifeCycleRule _lifeCycleRule)
         {
+            taskID = _taskID;
             billingAccountID = _billingAccountID;
             windowPeriodrules = _windowPeriodrules;
             retryRules = _retryRules;

@@ -35,7 +35,7 @@ namespace AccountPresentationSystem.Domain.Model.Scheduling
             windowPeriods.Add(new WindowPeriodRule(new TimeOfDay(19, 0, 0), new TimeOfDay(23, 0, 0)));
 
 
-            ScrapeTask newTask = new ScrapeTask(billingAccount.BillingAccountId.ToString(), windowPeriods, retryRules, lifeCycleRule);
+            ScrapeTask newTask = new ScrapeTask(Guid.NewGuid().ToString(), billingAccount.BillingAccountId.ToString(), windowPeriods, retryRules, lifeCycleRule);
             return newTask;
         }
 

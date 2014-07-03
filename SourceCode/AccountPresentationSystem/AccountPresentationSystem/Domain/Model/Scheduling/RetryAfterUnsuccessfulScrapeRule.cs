@@ -8,13 +8,21 @@ namespace AccountPresentationSystem.Domain.Model.Scheduling
 {
     public class RetryAfterUnsuccessfulScrapeRule : IValueObject<RetryAfterUnsuccessfulScrapeRule>
     {
-        public ScheduleErrorType ErrorType { get; set; }
-        public int RetryInterval { get; set; }
+        private readonly ScheduleErrorType errorType;
+        private readonly int retryInterval;
 
-        public RetryAfterUnsuccessfulScrapeRule(ScheduleErrorType errorType, int retryInterval)
+        public RetryAfterUnsuccessfulScrapeRule(ScheduleErrorType _errorType, int _retryInterval)
         {
-            ErrorType = errorType;
-            RetryInterval = retryInterval;
+            errorType = _errorType;
+            retryInterval = _retryInterval;
+        }
+
+        public DateTime GetEarliestNextTaskTime()
+        {
+            // This function works out the earliets task time available based on the billing account;
+
+            // Fake value for this prototype
+            return DateTime.Now.AddHours(1);
         }
 
         public bool SameValueAs(RetryAfterUnsuccessfulScrapeRule other)

@@ -8,9 +8,9 @@ namespace AccountPresentationSystem.Domain.Model.Scheduling
 {
     public class StatementLifeCycleRule : IValueObject<StatementLifeCycleRule>
     {
-        public int numOfDaysPerBillingCycle;
-        public int leadTimeInterval;
-        public int retryInterval;
+        private readonly int numOfDaysPerBillingCycle;
+        private readonly int leadTimeInterval;
+        private readonly int retryInterval;
 
         public StatementLifeCycleRule(int NumOfDaysPerBillingCycle, int LeadTimeInterval, int RetryInterval)
         {

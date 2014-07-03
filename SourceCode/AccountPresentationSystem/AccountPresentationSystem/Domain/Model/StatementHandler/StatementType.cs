@@ -11,50 +11,39 @@ namespace AccountPresentationSystem.Domain.Model.StatementHandler
     /// </summary>
     public class StatementType : IValueObject<StatementType>
     {
-        /// <summary>
-        /// The identifier
-        /// </summary>
-        private readonly int _statementtypeno;
-        private readonly string _statementtypename;
+        private SpecificFieldsFactory _factory;
+        private string _statementtypename;
+        private string[] _listspecificfields;
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="StatementId"/> class.
-        /// </summary>
-        /// <param name="id">The identifier.</param>
-        public StatementType(int statementtypeno, string statementtypename)
+
+        public StatementType(SpecificFieldsFactory factory, string statementtypename, string[] listspecificfields)
         {
-                this._statementtypeno = statementtypeno;
-                this._statementtypename = statementtypename;
+            this._factory = factory;
+            this._statementtypename = statementtypename;
+            this._listspecificfields = listspecificfields;
         }
 
-        /// <summary>
-        /// Gets the identifier int
-        /// </summary>
-        /// <value>
-        /// The identifier int.
-        /// </value>
-        public int StatementTypeNo
-        {
-            get { return _statementtypeno; }
-        }
-
-        /// <summary>
-        /// Gets the identifier string
-        /// </summary>
-        /// <value>
-        /// The identifier string
-        /// </value>
         public string StatementTypeName
         {
             get { return _statementtypename; }
         }
 
-      
+        public StatementSpecificFields getSpecificFields() 
+        {
+            StatementSpecificFields _specificfields;
+            _specificfields = _factory.createSpecificFields(_statementtypename, _listspecificfields);
+            return _specificfields;
+        }
+
 
         public bool SameValueAs(StatementType other)
         {
-            return StatementTypeNo.Equals(other.StatementTypeNo);
+            return other != null && _statementtypename.Equals(other.StatementTypeName);
         }
 
+
+        
+
+        
     }
 }

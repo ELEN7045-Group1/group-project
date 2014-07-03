@@ -11,19 +11,19 @@ namespace AccountPresentationSystem.Tests.Domain.StatementHandler
     class StatementTypeTest
     {
         [Test]
-        public void CreateStatementType_ExpectValid()
+        public void CreateStatementSpecificFields_ExpectValid()
         {
             //Arrange
-            int localstatementtypeno = 2;
-            string localstatementtypename = "Credit Card Providers";
+            SpecificFieldsFactory localfactory = new SpecificFieldsFactory();
+
+            string[] listspecificfields = { "You will need to pay by the 25th on the month", "1000" };
+
+            StatementType localStatementType = new StatementType(localfactory, "Municipality", listspecificfields);
             
-            
-            //Act
-            StatementType localStatementType = new StatementType(localstatementtypeno, localstatementtypename);
+            StatementSpecificFields localspecificfields = localStatementType.getSpecificFields();
 
             //Assert
-            Assert.AreEqual(localStatementType.StatementTypeNo, localstatementtypeno);
-            Assert.AreEqual(localStatementType.StatementTypeName, localstatementtypename);
+            Assert.IsNotNull(localspecificfields);
             
         }
     }

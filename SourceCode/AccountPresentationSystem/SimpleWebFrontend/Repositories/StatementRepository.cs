@@ -12,9 +12,9 @@ namespace SimpleWebFrontend.Repositories
 {
     public class StatementRepository : IStatementRepository
     {
-        public async Task<List<Statement>> GetAllStatementsPerUser(string UserID)
+        public async Task<List<FakeStatement>> GetAllStatementsPerUser(string UserID)
         {
-            List<Statement> retList = new List<Statement>();
+            List<FakeStatement> retList = new List<FakeStatement>();
 
             using (var client = new HttpClient())
             {
@@ -26,13 +26,13 @@ namespace SimpleWebFrontend.Repositories
                 HttpResponseMessage response = await client.GetAsync("api/statements/");
                 if (response.IsSuccessStatusCode)
                 {
-                    retList = await response.Content.ReadAsAsync<List<Statement>>();
+                    retList = await response.Content.ReadAsAsync<List<FakeStatement>>();
                 }
             }
             return retList;
         }
 
-        public async Task<Statement> GetSpecificStatement(string StatementId)
+        public async Task<FakeStatement> GetSpecificStatement(string StatementId)
         {
 
             using (var client = new HttpClient())
@@ -45,7 +45,7 @@ namespace SimpleWebFrontend.Repositories
                 HttpResponseMessage response = await client.GetAsync("api/statements/" + StatementId);
                 if (response.IsSuccessStatusCode)
                 {
-                    return await response.Content.ReadAsAsync<Statement>();
+                    return await response.Content.ReadAsAsync<FakeStatement>();
                 }
             }
             return null;

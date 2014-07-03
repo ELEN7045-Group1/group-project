@@ -22,14 +22,14 @@ namespace SimpleWebFrontend.Controllers
         // GET: Statement
         public async Task<ActionResult> Index()
         {
-            List<AccountPresentationSystem.Domain.Model.StatementHandler.Statement> Model = await StatementRepo.GetAllStatementsPerUser(FakeData.UserID);
+            List<AccountPresentationSystem.Domain.Model.StatementHandler.FakeStatement> Model = await StatementRepo.GetAllStatementsPerUser(FakeData.UserID);
             return View(Model);
         }
 
         // GET: Statement
         public async Task<ActionResult> Details(string Id)
         {
-            AccountPresentationSystem.Domain.Model.StatementHandler.Statement Model = await StatementRepo.GetSpecificStatement(Id);
+            AccountPresentationSystem.Domain.Model.StatementHandler.FakeStatement Model = await StatementRepo.GetSpecificStatement(Id);
             return View(Model);
         }
     }

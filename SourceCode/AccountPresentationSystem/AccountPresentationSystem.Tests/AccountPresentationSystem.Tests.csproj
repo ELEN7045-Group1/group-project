@@ -126,7 +126,6 @@
     <Compile Include="Domain\Model\Scheduling\TimeOfDayTest.cs" />
     <Compile Include="Domain\Model\StatementHandler\StatementCommonFieldsTest.cs" />
     <Compile Include="Domain\Model\StatementHandler\StatementIdTest.cs" />
-    <Compile Include="Domain\Model\StatementHandler\StatementSpecificFieldsTest.cs" />
     <Compile Include="Domain\Model\StatementHandler\StatementTest.cs" />
     <Compile Include="Domain\Model\StatementHandler\StatementTypeTest.cs" />
     <Compile Include="Domain\Service\LoadManagerServiceTest.cs" />

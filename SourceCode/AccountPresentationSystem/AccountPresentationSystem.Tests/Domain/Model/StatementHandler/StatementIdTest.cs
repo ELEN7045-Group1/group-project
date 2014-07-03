@@ -14,7 +14,7 @@ namespace AccountPresentationSystem.Tests.Domain.StatementHandler
         public void CreateStatementId_ExpectionThrown()
         {
             //Arrange -> Act -> Assert
-            Assert.Throws(typeof(ArgumentNullException), () => new Statement(null, null, null, null,null,null));
+            Assert.Throws(typeof(ArgumentNullException), () => new StatementId(null));
         }
 
         [Test]

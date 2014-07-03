@@ -5,13 +5,6 @@
     NoNewStatementError
 }
 
-public enum StatementTypesList
-{
-    Municipalities,
-    CreditCardProviders,
-    TelcoServicesProviders
-}
-
 public enum ScrapeTaskStatus
 {
     Pending,

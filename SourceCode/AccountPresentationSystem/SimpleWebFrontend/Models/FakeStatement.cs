@@ -13,15 +13,14 @@ using System.Web;
     /// Theoretical this class in actually pull from the Statement Repo it does so it interact with the rest of the objects 
     /// at this stage it will more be for display purposes  
     /// </summary>
-    public class Statement : IEntity<Statement>
+    public class FakeStatement : IEntity<FakeStatement>
     {
         private readonly StatementId _statementId;
         private readonly StatementCommonFields _statementCommonFields;
-        private readonly StatementType _statementType;
-        private readonly StatementSpecificFields _statementSpecificFields;
+        private readonly FakeStatementType _statementType;
+        private readonly List<FakeStatementSpecificFields> _statementSpecificFields;
         private readonly APSUser _apsuser;
         private readonly BillingAccount _billingAccount;
-
 
         /// <summary>
         /// Initializes a new instance of the <see cref="APSUser"/> class.
@@ -31,7 +30,7 @@ using System.Web;
         /// <param name="StatementType">Identifies the what type for statements this is</param>
         /// <param name="SpecificFields">Specific Fields allocated to statement based on  statement type</param>
         /// <exception cref="System.ArgumentNullException"></exception>
-        public Statement(StatementId statementId, StatementCommonFields statementCommonFields, StatementType statementType, StatementSpecificFields statementSpecificFields,  APSUser apsuser, BillingAccount billingAccount)
+        public FakeStatement(StatementId statementId, StatementCommonFields statementCommonFields, FakeStatementType statementType, List<FakeStatementSpecificFields> statementSpecificFields, APSUser apsuser, BillingAccount billingAccount)
         {
             if (statementId != null && statementCommonFields != null && statementType != null && statementSpecificFields != null && apsuser != null && billingAccount != null)
             {
@@ -72,7 +71,7 @@ using System.Web;
         /// <summary>
         /// Gets the statement type 
         /// </summary>
-        public StatementType StatementType
+        public FakeStatementType StatementType
         {
             get { return _statementType; }
         }
@@ -80,12 +79,10 @@ using System.Web;
         /// <summary>
         /// Gets the statement specific fields
         /// </summary>
-        public StatementSpecificFields StatementSpecificFields
+        public List<FakeStatementSpecificFields> StatementSpecificFields
         {
             get { return _statementSpecificFields; }
         }
-
-
 
         /// <summary>
         /// Gets the Aps User 
@@ -111,7 +108,7 @@ using System.Web;
         /// <returns>
         /// true if the identities are the same, regardles of other attributes.
         /// </returns>
-        public virtual bool SameIdentityAs(Statement other)
+        public virtual bool SameIdentityAs(FakeStatement other)
         {
             return StatementId.SameValueAs(other._statementId);
         }

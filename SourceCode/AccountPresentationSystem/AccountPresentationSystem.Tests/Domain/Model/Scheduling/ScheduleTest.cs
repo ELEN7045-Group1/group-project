@@ -11,7 +11,7 @@ using AccountPresentationSystem.Domain.Model.Billing;
 namespace AccountPresentationSystem.Domain.Model.Scheduling
 {
     [TestFixture]
-    public class SchedulerTest
+    public class ScheduleTest
     {
         IDBConnection db;
         IScrapeTaskRepository taskRepo;

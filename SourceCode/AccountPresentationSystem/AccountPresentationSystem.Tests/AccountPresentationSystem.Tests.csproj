@@ -129,7 +129,7 @@
     <Compile Include="Domain\Model\StatementHandler\StatementTest.cs" />
     <Compile Include="Domain\Model\StatementHandler\StatementTypeTest.cs" />
     <Compile Include="Domain\Service\LoadManagerServiceTest.cs" />
-    <Compile Include="Domain\Model\Scheduling\SchedulerTest.cs" />
+    <Compile Include="Domain\Model\Scheduling\ScheduleTest.cs" />
     <Compile Include="Intrastructure\LoggingTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

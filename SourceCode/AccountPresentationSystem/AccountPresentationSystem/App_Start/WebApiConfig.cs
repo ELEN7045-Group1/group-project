@@ -30,7 +30,6 @@ namespace AccountPresentationSystem.App_Start
             IDBConnection databaseConnection = new DBConnection();
 
             container.RegisterInstance<IDBConnection>(databaseConnection);
-            container.RegisterType<IScheduleRepository, ScheduleRepository>();
             container.RegisterType<IScrapeTaskFactory, ScrapeTaskFactory>();
             container.RegisterType<IScrapeTaskRepository, ScrapeTaskRepository>();
             container.RegisterType<IBillingAccountRepository, BillingAccountRepository>();

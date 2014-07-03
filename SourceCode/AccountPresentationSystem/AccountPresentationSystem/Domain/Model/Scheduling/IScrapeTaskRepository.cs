@@ -9,5 +9,6 @@ namespace AccountPresentationSystem.Domain.Model.Scheduling
     public interface IScrapeTaskRepository
     {
         void SaveScrapeTask(ScrapeTask task);
+        List<ScrapeTask> GetAllScrapeTask();
     }
 }

@@ -8,5 +8,6 @@
     public interface IBillingAccountRepository
     {
         List<BillingAccount> GetAllBillingAccounts();
+        List<BillingAccount> GetAllBillingAccountsWithNoScrapeTasks();
     }
 }

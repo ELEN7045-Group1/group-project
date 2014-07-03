@@ -55,13 +55,6 @@
             UnableToCheckDataIntegrity
         }
 
-        public enum ScrapeTaskStatus
-        {
-            Pending,
-            Busy,
-            Completed,
-            Failed
-        }
 
         #region IComparable Members
 

@@ -11,3 +11,11 @@ public enum StatementTypesList
     CreditCardProviders,
     TelcoServicesProviders
 }
+
+public enum ScrapeTaskStatus
+{
+    Pending,
+    Busy,
+    Completed,
+    Failed
+}

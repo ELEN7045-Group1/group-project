@@ -30,6 +30,9 @@ namespace AccountPresentationSystem.App_Start
 
             container.RegisterInstance<IDBConnection>(databaseConnection);
             container.RegisterType<IScheduleRepository, ScheduleRepository>();
+            container.RegisterType<IScrapeTaskFactory, ScrapeTaskFactory>();
+            container.RegisterType<IScrapeTaskRepository, ScrapeTaskRepository>();
+            container.RegisterType<ISchedule, Schedule>();
 
             config.DependencyResolver = new UnityResolver(container);
         }

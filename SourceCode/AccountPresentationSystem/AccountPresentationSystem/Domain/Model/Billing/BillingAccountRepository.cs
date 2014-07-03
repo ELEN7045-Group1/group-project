@@ -40,5 +40,16 @@
 
             return billingAccounts;
         }
+
+
+        public List<BillingAccount> GetAllBillingAccountsWithNoScrapeTasks()
+        {
+            List<BillingAccount> billingAccounts = new List<BillingAccount>();
+
+            DataTable dt = dataConnection.SelectQuery("Select query to retrieve All Billing Accounts with no scrape tasks associated");
+
+            billingAccounts.Add(new BillingAccount(new BillingAccountId(Guid.NewGuid().ToString()), new BillingCompanyId(Guid.NewGuid().ToString()), "username1", "password1", new APSUser(new APSUserId(Guid.NewGuid().ToString()), "user1", "password1")));
+            return billingAccounts;
+        }
     }
 }

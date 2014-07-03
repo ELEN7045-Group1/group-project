@@ -19,6 +19,14 @@ namespace AccountPresentationSystem.Domain.Model.Scheduling
             retryInterval = RetryInterval;
         }
 
+        public DateTime GetEarliestNextTaskTime()
+        {
+            // This function works out the earliets task time available based on the billing account;
+
+            // Fake value for this prototype
+            return DateTime.Now.AddHours(1);
+        }
+
         public bool SameValueAs(StatementLifeCycleRule other)
         {
             if ((other != null) && (other == this))

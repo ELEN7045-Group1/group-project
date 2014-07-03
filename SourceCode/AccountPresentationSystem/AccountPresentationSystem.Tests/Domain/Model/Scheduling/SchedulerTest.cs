@@ -14,15 +14,17 @@ namespace AccountPresentationSystem.Domain.Model.Scheduling
     public class SchedulerTest
     {
         IDBConnection db;
-        TaskRepository taskRepo;
-        BillingCompanyRepository billingCompanyRepo;
+        IScrapeTaskRepository taskRepo;
+        IBillingAccountRepository billingAccountRepo;
+        IScrapeTaskFactory scrapeTaskFactory;
 
         [SetUp]
         public void SetupTests()
         {
             db = MockRepository.GenerateMock<IDBConnection>();
-            taskRepo = MockRepository.GenerateMock<TaskRepository>(db);
-            billingCompanyRepo = MockRepository.GenerateMock<BillingCompanyRepository>(db);
+            taskRepo = MockRepository.GenerateMock<ScrapeTaskRepository>(db);
+            billingAccountRepo = MockRepository.GenerateMock<BillingAccountRepository>(db);
+            scrapeTaskFactory = MockRepository.GenerateMock<ScrapeTaskFactory>();
         }
 
 
@@ -30,7 +32,7 @@ namespace AccountPresentationSystem.Domain.Model.Scheduling
         public void RunCreateNewTaskTest()
         {
             // Arrange
-            Schedule MySchedule = new Schedule(taskRepo, billingCompanyRepo);
+            Schedule MySchedule = new Schedule(taskRepo, billingAccountRepo, scrapeTaskFactory);
 
             // Act
             int TasksCreatedCount = MySchedule.CreateNewTasks();
@@ -47,7 +49,7 @@ namespace AccountPresentationSystem.Domain.Model.Scheduling
             BillingCompany billingCompany = new BillingCompany(new BillingCompanyId(Guid.NewGuid().ToString()), "PVC Test Company");
             BillingAccount billingAccount = new BillingAccount(new BillingAccountId(Guid.NewGuid().ToString()), billingCompany.billingCompanyId, "username1", "password1", user);
 
-            Schedule MySchedule = new Schedule(taskRepo, billingCompanyRepo);
+            Schedule MySchedule = new Schedule(taskRepo, billingAccountRepo, scrapeTaskFactory);
 
             // Act
             int TasksCreatedCount = MySchedule.CreateNewTasks();

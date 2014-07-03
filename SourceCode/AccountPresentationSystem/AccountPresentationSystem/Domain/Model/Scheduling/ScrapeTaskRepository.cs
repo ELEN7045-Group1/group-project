@@ -6,13 +6,18 @@ using System.Web;
 
 namespace AccountPresentationSystem.Domain.Model.Scheduling
 {
-    public class TaskRepository : ITaskRepository
+    public class ScrapeTaskRepository : IScrapeTaskRepository
     {
         private readonly IDBConnection dbConnection;
 
-        public TaskRepository(IDBConnection _dbConnection)
+        public ScrapeTaskRepository(IDBConnection _dbConnection)
         {
             dbConnection = _dbConnection;
+        }
+
+        public void SaveScrapeTask(ScrapeTask task)
+        {
+            // This will save the scrapetask to the db connection
         }
     }
 }

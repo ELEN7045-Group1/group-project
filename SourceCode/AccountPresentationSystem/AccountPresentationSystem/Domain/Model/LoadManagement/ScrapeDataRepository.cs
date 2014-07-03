@@ -19,6 +19,9 @@ namespace AccountPresentationSystem.Domain.Model.LoadManagement
 
         public List<LoadManagerErrors> SaveScrapeData(List<ScrapeData> scrapedData)
         {
+            ReferenceGenerator refGen = new ReferenceGenerator();
+            string refNum = refGen.GenerateReference();
+
             List<LoadManagerErrors> loadManagerErrors = new List<LoadManagerErrors>();
             Logging log = new Logging();
             int rowsSavedCount = 0;
@@ -31,13 +34,13 @@ namespace AccountPresentationSystem.Domain.Model.LoadManagement
                     rowsSavedCount = rowsSavedCount + dataSaved;
                 }
 
-                log.LogMessage(Enumeration.LoggingPriority.Low, "123", rowsSavedCount.ToString() + " scraped data rows stored in DB");
+                log.LogMessage(Enumeration.LoggingPriority.Low, refNum, rowsSavedCount.ToString() + " scraped data rows stored in DB");
 
                 loadManagerErrors.Add(new LoadManagerErrors { ErrorCode = 00, ErrorDescription = "Scraped Data Saved", Message = rowsSavedCount.ToString() + " records saved" });
             }
             catch (Exception ex)
             {
-                log.LogMessage(Enumeration.LoggingPriority.High, "123", ex);
+                log.LogMessage(Enumeration.LoggingPriority.High, refNum, ex);
 
                 loadManagerErrors.Add(new LoadManagerErrors { ErrorCode = 91, ErrorDescription = "Error Occured", Message = ex.InnerException.Message });
             }

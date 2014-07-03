@@ -19,9 +19,12 @@ namespace AccountPresentationSystem.Domain.Model.LoadManagement
 
         public List<LoadManagerRule> LoadRules()
         {
-            List<LoadManagerRule> listRules = new List<LoadManagerRule>();
             Logging log = new Logging();
+            ReferenceGenerator refGen = new ReferenceGenerator();
+            string refNum = refGen.GenerateReference();
 
+            List<LoadManagerRule> listRules = new List<LoadManagerRule>();
+            
             try
             {
                 // This retrieves all Load Manager Rules via the DBConnetion
@@ -29,7 +32,7 @@ namespace AccountPresentationSystem.Domain.Model.LoadManagement
             }
             catch (Exception ex)
             {
-                log.LogMessage(Enumeration.LoggingPriority.High, "123", ex);
+                log.LogMessage(Enumeration.LoggingPriority.High, refNum, ex);
 
                 listRules.Add(new LoadManagerRule());
             }

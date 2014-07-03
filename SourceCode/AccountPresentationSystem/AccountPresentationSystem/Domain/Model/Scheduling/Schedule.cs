@@ -8,7 +8,7 @@ using System.Web;
 
 namespace AccountPresentationSystem.Domain.Model.Scheduling
 {
-    public class Schedule : IValueObject<Schedule>, ISchedule
+    public class Schedule : IEntity<Schedule>, ISchedule
     {
         private readonly IScrapeTaskRepository taskRepo;
         private readonly IBillingAccountRepository billingAccountRepo;
@@ -41,12 +41,9 @@ namespace AccountPresentationSystem.Domain.Model.Scheduling
             taskRepo.SaveScrapeTask(newTask);
         }
 
-        public bool SameValueAs(Schedule other)
+        public bool SameIdentityAs(Schedule other)
         {
-            if ((other != null) && (other == this))
-                return true;
-            else
-                return false;
+            throw new NotImplementedException();
         }
     }
 

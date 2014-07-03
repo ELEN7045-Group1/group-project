@@ -7,7 +7,7 @@ using AccountPresentationSystem.Domain.Model.Billing;
 
 namespace AccountPresentationSystem.Domain.Model.Scheduling
 {
-    public class ScrapeTask
+    public class ScrapeTask : IEntity<ScrapeTask>
     {
         private readonly string billingAccountID;
         private readonly string taskID;
@@ -53,6 +53,11 @@ namespace AccountPresentationSystem.Domain.Model.Scheduling
 
             //Fake value for this prototype
             return DateTime.Now.AddHours(1);
+        }
+
+        public bool SameIdentityAs(ScrapeTask other)
+        {
+            throw new NotImplementedException();
         }
     }
 }

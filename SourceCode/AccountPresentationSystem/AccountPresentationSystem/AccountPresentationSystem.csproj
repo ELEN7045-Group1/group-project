@@ -179,13 +179,11 @@
     <Compile Include="Domain\Model\Scheduling\Schedule.cs" />
     <Compile Include="Domain\Model\Scheduling\ScheduleRepository.cs" />
     <Compile Include="Domain\Model\Scheduling\StatementLifeCycleRule.cs" />
-    <Compile Include="Domain\Model\Scheduling\RetryAfterUnsuccessfulScrapeRuleRepository.cs" />
     <Compile Include="Domain\Model\Scheduling\ScrapeTask.cs" />
     <Compile Include="Domain\Model\Scheduling\ScrapeTaskRepository.cs" />
     <Compile Include="Domain\Model\Scheduling\ScrapeTaskFactory.cs" />
     <Compile Include="Domain\Model\Scheduling\TimeOfDay.cs" />
     <Compile Include="Domain\Model\Scheduling\WindowPeriodRule.cs" />
-    <Compile Include="Domain\Model\Scheduling\WindowPeriodRuleRepository.cs" />
     <Compile Include="Domain\Model\StatementHandler\IStatementRepository.cs" />
     <Compile Include="Domain\Model\StatementHandler\SpecificFieldsFactory.cs" />
     <Compile Include="Domain\Model\StatementHandler\Statement.cs" />

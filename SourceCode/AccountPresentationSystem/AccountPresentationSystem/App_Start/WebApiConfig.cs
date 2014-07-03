@@ -1,4 +1,5 @@
-﻿using AccountPresentationSystem.Domain.Model.Scheduling;
+﻿using AccountPresentationSystem.Domain.Model.Billing;
+using AccountPresentationSystem.Domain.Model.Scheduling;
 using AccountPresentationSystem.Infrastructure;
 using Microsoft.Practices.Unity;
 using System;
@@ -32,6 +33,7 @@ namespace AccountPresentationSystem.App_Start
             container.RegisterType<IScheduleRepository, ScheduleRepository>();
             container.RegisterType<IScrapeTaskFactory, ScrapeTaskFactory>();
             container.RegisterType<IScrapeTaskRepository, ScrapeTaskRepository>();
+            container.RegisterType<IBillingAccountRepository, BillingAccountRepository>();
             container.RegisterType<ISchedule, Schedule>();
 
             config.DependencyResolver = new UnityResolver(container);

@@ -172,12 +172,10 @@
     <Compile Include="Domain\Model\LoadManagement\ScrapeSession.cs" />
     <Compile Include="Domain\Model\Billing\ScrapingScript.cs" />
     <Compile Include="Domain\Model\Scheduling\ISchedule.cs" />
-    <Compile Include="Domain\Model\Scheduling\IScheduleRepository.cs" />
     <Compile Include="Domain\Model\Scheduling\IScrapeTaskFactory.cs" />
     <Compile Include="Domain\Model\Scheduling\IScrapeTaskRepository.cs" />
     <Compile Include="Domain\Model\Scheduling\RetryAfterUnsuccessfulScrapeRule.cs" />
     <Compile Include="Domain\Model\Scheduling\Schedule.cs" />
-    <Compile Include="Domain\Model\Scheduling\ScheduleRepository.cs" />
     <Compile Include="Domain\Model\Scheduling\StatementLifeCycleRule.cs" />
     <Compile Include="Domain\Model\Scheduling\ScrapeTask.cs" />
     <Compile Include="Domain\Model\Scheduling\ScrapeTaskRepository.cs" />

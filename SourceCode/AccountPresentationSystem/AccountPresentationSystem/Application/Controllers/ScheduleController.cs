@@ -13,17 +13,17 @@ namespace AccountPresentationSystem.Application.Controllers
 {
     public class ScheduleController : ApiController
     {
-        private readonly IScheduleRepository scheduleRepository;
+        private readonly IScrapeTaskRepository scrapeTaskRepository;
 
-        public ScheduleController(IScheduleRepository scheduleRepository)
+        public ScheduleController(IScrapeTaskRepository _scrapeTaskRepository)
         {
-            this.scheduleRepository = scheduleRepository;
+            scrapeTaskRepository = _scrapeTaskRepository;
         }
 
         // GET api/<controller>
         public IEnumerable<string> Get()
         {
-            List<Schedule> Schedules = scheduleRepository.GetAllSchedules();
+            List<ScrapeTask> ScrapeTasks = scrapeTaskRepository.GetAllScrapeTask();
 
             return new string[] { "value1", "value2" };
         }

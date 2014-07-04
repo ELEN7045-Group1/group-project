@@ -145,6 +145,7 @@
     <Compile Include="Domain\Model\DataIntegrity\DataIntegrityChecker.cs" />
     <Compile Include="Domain\Model\DataIntegrity\DataIntegrityCustomRule.cs" />
     <Compile Include="Domain\Model\DataIntegrity\DataIntegrityRule.cs" />
+    <Compile Include="Domain\Model\DataIntegrity\DataIntegrityRuleRepository.cs" />
     <Compile Include="Domain\Model\DataIntegrity\IDataIntegrityRuleRepository.cs" />
     <Compile Include="Domain\Model\ErrorHandling\BillingCompanySiteDown.cs" />
     <Compile Include="Domain\Model\ErrorHandling\BrokenScript.cs" />

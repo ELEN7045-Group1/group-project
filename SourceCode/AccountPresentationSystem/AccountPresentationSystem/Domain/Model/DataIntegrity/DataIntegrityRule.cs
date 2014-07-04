@@ -1,5 +1,6 @@
 ﻿namespace AccountPresentationSystem.Domain.Model.DataIntegrity
 {
+    using AccountPresentationSystem.Domain.Model.StatementHandler;
     using AccountPresentationSystem.Domain.Shared;
     using System;
     using System.Collections.Generic;
@@ -8,19 +9,19 @@
 
     public class DataIntegrityRule :IValueObject<DataIntegrityRule>
     {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="APSUser"/> class.
-        /// </summary>
-        /// <param name="apsUserId">The aps user identifier.</param>
-        /// <param name="username">The username.</param>
-        /// <param name="password">The password.</param>
-        /// <exception cref="System.ArgumentNullException"></exception>
-        /// 
         public DataIntegrityRule()
         {
             CheckResult = true;
         }
 
+        private Statement statement;
+
+        public Statement Statement
+        {
+            get { return statement; }
+            set { statement = value; }
+        }
+        
         private bool checkResult;
 
         public bool CheckResult

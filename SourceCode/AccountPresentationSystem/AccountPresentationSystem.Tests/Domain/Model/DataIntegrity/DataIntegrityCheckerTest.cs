@@ -17,6 +17,6 @@
         {
             //Arrange -> Act -> Assert
             Assert.Throws(typeof(ArgumentNullException), () => new DataIntegrityChecker(null));
-        }
+        }    
     }
 }

@@ -19,9 +19,18 @@ namespace AccountPresentationSystem.Domain.Model.DataIntegrity
         public DataIntegrityChecker(Statement statement)
         {
             if (statement != null)
+            {
                 this.statement = statement;
+                ApplyIntegrityRules(this.statement);
+            }
             else
                 throw new ArgumentNullException();
+        }
+
+        private void ApplyIntegrityRules(Statement statement)
+        {
+            DataIntegrityRule dir = new DataIntegrityRule();
+            dir.Statement = statement;
         }
     }
 }

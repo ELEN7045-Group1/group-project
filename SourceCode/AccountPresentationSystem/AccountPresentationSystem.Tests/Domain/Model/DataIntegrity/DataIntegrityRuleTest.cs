@@ -18,14 +18,6 @@
         public void AdditionRuleIntegrityCheckTest()
         {
             //Arrange
-                    StatementId _statementId;
-        StatementCommonFields _statementCommonFields;
-        StatementType _statementType;
-        List<StatementSpecificFields> _statementSpecificFields;
-        APSUser _apsuser;
-        BillingAccount _billingAccount;
-
-            //Statement _statement = new Statement(_statementId, _statementCommonFields, _statementType, _statementSpecificFields, _apsuser, _billingAccount);
             DataIntegrityRule dir = new DataIntegrityRule();
 
             //Act
